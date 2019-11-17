@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
 int main() {
-	int n = 0;
-	cout << n;
+	int k = 0;
+	cout << k;
+	int v, e;
 
 
 }
