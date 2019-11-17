@@ -20,7 +20,7 @@ int main() {
 			graph[node1].push_back(node2);
 			graph[node2].push_back(node1);
 		}
-
+		 
 
 
 	}	       
