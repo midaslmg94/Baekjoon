@@ -7,7 +7,7 @@ int main() {
 	cin.tie(0);
 	long long T;
 	cin >> T;
-	
+		
 	int n, m;
 	cin >> n;
 	vector<long long>A(n);
@@ -52,4 +52,5 @@ int main() {
 		result += high - low;
 	}
 	cout << result << endl;
+
 }
