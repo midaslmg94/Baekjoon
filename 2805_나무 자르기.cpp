@@ -20,7 +20,7 @@ int main() {
 		for (int i = 0; i < N; i++) {
 			if (tree[i] > mid) {
 				myTree += tree[i] - mid;
-			}
+			} 
 		}
 		if (M > myTree) { // 나무가 더 필요하다면
 			right = mid - 1;

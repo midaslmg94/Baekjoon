@@ -18,7 +18,7 @@ int main() {
 	long long right = v[k - 1]; //자를 수 있는 최대 길이
 	long long ans = 0;
 
-	while (left <= right) {
+	while (left <= right) { 
 		long long mid = (left + right) / 2; // 현재 자르는 랜선의 길이
 		long long cur = 0; // 현재까지 자른 랜선의 개수
 		for (int i = 0; i < k; i++) {
