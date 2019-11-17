@@ -14,7 +14,7 @@ using namespace std;
 	상하좌우대각선으로 움직임 가능
 */
 vector<vector<int>> map;
-int visit[50][50];
+int visit[50][50]; 
 int dx[8] = { 0, 0, 1, -1,-1, -1,  1, 1 };
 int dy[8] = { 1,-1,0,  0, -1,  1, -1, 1 };
 

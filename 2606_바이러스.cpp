@@ -13,7 +13,7 @@ void dfs(int idx) {
 		if (!check[next]) {
 			dfs(next);
 			cnt++;
-		}
+		} 
 	}
 }
 int main() {
