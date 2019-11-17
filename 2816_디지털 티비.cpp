@@ -16,7 +16,7 @@ void switching(vector<string>& ch) {
 		cout << "4";
 		i--;
 	}
-	// kbs2가 두번째이면 종료
+	// kbs2가 두번째이면 종료 
 	if (ch[1] == "KBS2") { return; }
 	// kbs2 나올때까지 내리기
 	while (ch[i] != "KBS2") {

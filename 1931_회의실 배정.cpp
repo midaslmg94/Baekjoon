@@ -15,7 +15,7 @@ int main() {
 	}
 	int tmp_start = 0;
 	int tmp_end = 0;
-
+	 
 	tmp_start = q.top().second;
 	tmp_end = q.top().first;
 	int cnt = 1;
