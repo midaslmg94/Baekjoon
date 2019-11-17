@@ -84,9 +84,6 @@
     <ClCompile Include="디지털 티비_2816.cpp">
       <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
-    <ClCompile Include="회의실 배정_1931.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy</Filter>
-    </ClCompile>
     <ClCompile Include="나무 자르기_2805.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
@@ -140,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="소스.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="회의실 배정_1931.cpp">
+      <Filter>소스 파일\BaekJoon\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="소스1.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
