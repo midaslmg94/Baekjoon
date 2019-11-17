@@ -22,7 +22,7 @@ int main() {
 			}
 			else {
 				dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j + 1]) % mod;
-			}
+			}  
 		}
 	}
 	for (int i = 1; i < 10; i++) {

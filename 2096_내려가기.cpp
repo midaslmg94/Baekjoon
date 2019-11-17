@@ -23,7 +23,7 @@ int main() {
 		ret_MAX[0] = a;
 		ret_MAX[1] = b;
 		ret_MAX[2] = c;
-
+		  
 
 		x += min(ret_MIN[0], ret_MIN[1]);
 		y += min(min(ret_MIN[0], ret_MIN[1]), ret_MIN[2]);

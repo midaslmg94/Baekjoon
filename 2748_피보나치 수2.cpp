@@ -13,4 +13,4 @@ int main() {
 	}
 	cout << memo[n - 1];
 	return 0;
-}
+}  
