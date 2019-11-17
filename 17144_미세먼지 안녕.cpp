@@ -19,7 +19,7 @@ int cango(int x, int y) {// 확산 가능한 지점이 몇개인지
 		}
 	}
 	return cnt;
-}
+} 
 
 void spread() { //미세먼지 확산	
 	for (int i = 0; i < r; i++) {

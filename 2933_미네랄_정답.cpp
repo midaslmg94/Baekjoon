@@ -21,7 +21,7 @@ int main() {
 	}
 	int n;
 	cin >> n; // 막대를 던진 횟수
-	bool left = true; // 왼쪽부터 던짐
+	bool left = true; // 왼쪽부터 던짐 
 	/*막대기 던져서 미네랄 파괴*/
 	while (n--) {
 		int height;

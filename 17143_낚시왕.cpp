@@ -24,7 +24,7 @@ void moveShark() {
 		for (int j = 0; j < C; j++) {
 			//s와 d를 확인하여 이동방향, 거리 확인
 			if (shark[i][j].front().first != 0 && check[i][j] == 0) {
-				int x = i;
+				int x = i; 
 				int y = j;
 				int size = shark[i][j].front().first; //크기
 				int dir = shark[i][j].front().second.first; //이동방향

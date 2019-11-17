@@ -18,7 +18,7 @@ bool canGo(int x, int y) {
 	return check;
 }
 void goDown(int x, int y) {
-	if (canGo(x, y)) {
+	if (canGo(x, y)) { 
 
 	}
 }

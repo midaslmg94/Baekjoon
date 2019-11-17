@@ -23,7 +23,7 @@ int main() {
 	for (int i = 1; i <= M; i++) {
 		cin >> x >> y >> z; //x,y : 나무의 위치(x,y), z : 나무의 나이
 		tree[x][y] = z;
-	}
+	} 
 
 	int map[11][11];
 	for (int i = 1; i <= N; i++) {
