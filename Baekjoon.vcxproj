@@ -143,8 +143,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2n타일링 2_11727.cpp" />
+    <ClCompile Include="2n타일링_11726.cpp" />
+    <ClCompile Include="2n타일링_정답.cpp" />
+    <ClCompile Include="LCS_9215.cpp" />
+    <ClCompile Include="내려가기_2096.cpp" />
     <ClCompile Include="소스.cpp" />
+    <ClCompile Include="쉬운 계단 수_10844.cpp" />
+    <ClCompile Include="오르막수_11057.cpp" />
     <ClCompile Include="이분 그래프_1707.cpp" />
+    <ClCompile Include="피보나치 수2_2748.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

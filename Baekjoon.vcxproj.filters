@@ -13,8 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\Graph">
-      <UniqueIdentifier>{7dda2d32-8d64-4eee-a3bf-896f9f1eee55}</UniqueIdentifier>
+    <Filter Include="소스 파일\BaekJoon">
+      <UniqueIdentifier>{d9dcf904-ee67-4e48-9249-8e2b2780708e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph">
+      <UniqueIdentifier>{38bc620a-b447-4963-abf8-61426a65cc4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\DP">
+      <UniqueIdentifier>{9d4832a0-96b3-4f37-9001-fb914e870ef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Greedy">
+      <UniqueIdentifier>{cf807df6-5835-48c4-9082-3a2db4a88fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Brute Force">
+      <UniqueIdentifier>{54ec1e85-6d12-48c8-ab55-57545b6341ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Search">
+      <UniqueIdentifier>{485921d1-d780-4939-8f10-bca0a6e30d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Simulation">
+      <UniqueIdentifier>{4862a48f-6833-4073-a886-fab18f3b0ef7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -22,7 +40,31 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="이분 그래프_1707.cpp">
-      <Filter>소스 파일\Graph</Filter>
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="2n타일링_11726.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2n타일링_정답.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2n타일링 2_11727.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="LCS_9215.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="내려가기_2096.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="쉬운 계단 수_10844.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="오르막수_11057.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="피보나치 수2_2748.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
