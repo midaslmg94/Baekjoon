@@ -99,9 +99,6 @@
     <ClCompile Include="2621_카드게임.cpp">
       <Filter>소스 파일\BaekJoon\ETC</Filter>
     </ClCompile>
-    <ClCompile Include="1931_회의실 배정.cpp">
-      <Filter>소스 파일\BaekJoon\ETC</Filter>
-    </ClCompile>
     <ClCompile Include="2606_바이러스.cpp">
       <Filter>소스 파일\BaekJoon\Graph</Filter>
     </ClCompile>
@@ -137,6 +134,9 @@
     </ClCompile>
     <ClCompile Include="17144_미세먼지 안녕.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="1931_회의실 배정.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

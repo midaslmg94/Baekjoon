@@ -11,7 +11,7 @@ int main() {
 		int sec = n % 10;
 		int ans = first + sec;
 		n = (sec * 10) + (ans % 10);
-		cnt++;
+		cnt++;  
 		if (n == n1) {
 			cout << cnt;
 			break;

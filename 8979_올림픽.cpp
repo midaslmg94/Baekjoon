@@ -13,7 +13,7 @@ struct medal {
 vector<medal> arr(1001);
 
 bool cmp(const medal& a, const medal& b) {
-	if (a.gold > b.gold) { return true; }
+	if (a.gold > b.gold) { return true; }  
 	else if (a.gold == b.gold) {
 		if (a.silver > b.silver) { return true; }
 		else if (a.silver == b.silver) {

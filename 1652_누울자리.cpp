@@ -8,7 +8,7 @@ int maxRow(int n) { //°¡·Î
 	for (int i = 0; i < n; i++) {
 		int space = 0;
 		for (int j = 0; j < n; j++) {
-			if (room[i].at(j) == '.') {
+			if (room[i].at(j) == '.') {  
 				space++;
 				if (j == n - 1) {
 					if (space >= 2) {
