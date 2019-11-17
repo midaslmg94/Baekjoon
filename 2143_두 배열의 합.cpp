@@ -52,5 +52,5 @@ int main() {
 		result += high - low;
 	}
 	cout << result << endl;
-
+	     
 }

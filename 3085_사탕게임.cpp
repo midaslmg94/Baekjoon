@@ -5,7 +5,7 @@
 using namespace std;
 string map[50];
 int n;
-
+  
 int eat() {
 	int right = 0;
 	int right_max = 0;

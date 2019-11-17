@@ -3,7 +3,7 @@
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
-
+  
 int n, nn;
 int a[4000], b[4000], c[4000], d[4000];
 int ab[16000000], cd[16000000];

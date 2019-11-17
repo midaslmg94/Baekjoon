@@ -3,7 +3,7 @@
 const int MAX = 1000001;
 using namespace std;
 vector<pair<int, int>>v(MAX);
-
+  
 // i의 부분합을 구하는 함수
 int func(int i) {
 	int res = i;
