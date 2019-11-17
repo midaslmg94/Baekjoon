@@ -20,7 +20,7 @@ void sol(int n, int m, int index) {
 		check[i] = false;
 	}
 }
-
+  
 int main() {
 	//1부터 n까지 자연수 중 중복없이 m개를 고른 수열	
 	int n, m;
