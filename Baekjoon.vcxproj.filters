@@ -138,5 +138,8 @@
     <ClCompile Include="1931_회의실 배정.cpp">
       <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
+    <ClCompile Include="소스1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
