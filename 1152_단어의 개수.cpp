@@ -14,7 +14,7 @@ int main() {
 		if (i == 0 || i==str.size()-1) {
 			if (str[i] == 32)
 				continue;
-		}
+		} 
 		else {
 			if (str[i] == 32) {
 				cnt++;
