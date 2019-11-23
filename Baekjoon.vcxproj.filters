@@ -49,6 +49,9 @@
     <Filter Include="소스 파일\BaekJoon\Priority Queue">
       <UniqueIdentifier>{7b24361d-4ba0-4169-99c6-35f6f8828102}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Deque">
+      <UniqueIdentifier>{44e4088b-2c50-4bfc-a06d-7ff686ca526e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
@@ -152,6 +155,9 @@
     </ClCompile>
     <ClCompile Include="11279_최대 힙.cpp">
       <Filter>소스 파일\BaekJoon\Priority Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="5430_AC.cpp">
+      <Filter>소스 파일\BaekJoon\Deque</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
