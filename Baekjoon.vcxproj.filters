@@ -52,6 +52,9 @@
     <Filter Include="소스 파일\BaekJoon\Deque">
       <UniqueIdentifier>{44e4088b-2c50-4bfc-a06d-7ff686ca526e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Segement Tree">
+      <UniqueIdentifier>{3ae7edb3-b723-498d-831a-437921d4cbe5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
@@ -158,6 +161,12 @@
     </ClCompile>
     <ClCompile Include="5430_AC.cpp">
       <Filter>소스 파일\BaekJoon\Deque</Filter>
+    </ClCompile>
+    <ClCompile Include="2042_구간 합 구하기.cpp">
+      <Filter>소스 파일\BaekJoon\Segement Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="2042_구간 합 구하기_정답.cpp">
+      <Filter>소스 파일\BaekJoon\Segement Tree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

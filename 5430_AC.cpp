@@ -53,7 +53,7 @@ int main() {
 			}
 		}
 		
-		//출력처리 : 쉼표를 어떻게 할까
+		//출력처리 
 		if (is_empty) {
 			cout << "error\n";
 		}
