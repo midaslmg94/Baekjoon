@@ -10,15 +10,14 @@ int ans = 0;
 int dfs(int idx) {
 	if (graph[idx][0] == idx) { // 루프인 경우
 		visited[idx] = true;
-		cnt++;
+		cnt=1;
 		return cnt;
 	}
 	int next = graph[idx][0];
 	if (!visited[next]) {	
 		visited[next] = true;
-		cnt++;
 		dfs(next);
-		cnt = cnt / cnt;
+		cnt = 1;
 		return cnt;
 	}
 	return 0;
