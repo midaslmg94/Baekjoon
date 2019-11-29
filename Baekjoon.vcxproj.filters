@@ -153,9 +153,6 @@
     <ClCompile Include="1152_단어의 개수.cpp">
       <Filter>소스 파일\BaekJoon\String</Filter>
     </ClCompile>
-    <ClCompile Include="연습.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="11279_최대 힙.cpp">
       <Filter>소스 파일\BaekJoon\Priority Queue</Filter>
     </ClCompile>
@@ -167,6 +164,12 @@
     </ClCompile>
     <ClCompile Include="2042_구간 합 구하기_정답.cpp">
       <Filter>소스 파일\BaekJoon\Segement Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10451_순열 사이클.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
