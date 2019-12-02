@@ -55,6 +55,9 @@
     <Filter Include="소스 파일\BaekJoon\Segement Tree">
       <UniqueIdentifier>{3ae7edb3-b723-498d-831a-437921d4cbe5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\Dijkstra">
+      <UniqueIdentifier>{d17450e0-f0be-4703-81d6-103fe362ce87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
@@ -172,7 +175,10 @@
       <Filter>소스 파일\BaekJoon\Graph</Filter>
     </ClCompile>
     <ClCompile Include="1753_최단경로.cpp">
-      <Filter>소스 파일\BaekJoon\Graph</Filter>
+      <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="1916_최소비용 구하기.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
