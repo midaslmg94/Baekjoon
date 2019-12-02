@@ -10,7 +10,7 @@ int ans = 0;
 int dfs(int idx) {
 	if (graph[idx][0] == idx) { // 루프인 경우
 		visited[idx] = true;
-		cnt=1;
+		cnt=1; // 루프의 경우 
 		return cnt;
 	}
 	int next = graph[idx][0];
