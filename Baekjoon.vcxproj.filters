@@ -186,5 +186,11 @@
     <ClCompile Include="1197_최소 스패닝 트리.cpp">
       <Filter>소스 파일\BaekJoon\Graph\MST</Filter>
     </ClCompile>
+    <ClCompile Include="클래스, 구조체.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2211_네트워크 복구.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\MST</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
