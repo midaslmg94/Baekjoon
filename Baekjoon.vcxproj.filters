@@ -195,5 +195,8 @@
     <ClCompile Include="2133_타일 채우기.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="7576_토마토.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
