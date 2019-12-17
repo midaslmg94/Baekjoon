@@ -61,7 +61,7 @@
     <Filter Include="소스 파일\BaekJoon\Graph\MST">
       <UniqueIdentifier>{d44cb165-e14a-46d2-a4f6-0e2af5b1a59c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Math">
+    <Filter Include="소스 파일\BaekJoon\Structure">
       <UniqueIdentifier>{5b285fbc-3833-4257-8211-b208f0eadc5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -205,7 +205,10 @@
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
     <ClCompile Include="1475_방 번호.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="5397_키로거.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
