@@ -61,6 +61,9 @@
     <Filter Include="소스 파일\BaekJoon\Graph\MST">
       <UniqueIdentifier>{d44cb165-e14a-46d2-a4f6-0e2af5b1a59c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Math">
+      <UniqueIdentifier>{5b285fbc-3833-4257-8211-b208f0eadc5c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
@@ -197,6 +200,9 @@
     </ClCompile>
     <ClCompile Include="7576_토마토.cpp">
       <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="2577_숫자의 개수.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
