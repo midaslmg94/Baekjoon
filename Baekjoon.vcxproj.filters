@@ -219,5 +219,8 @@
     <ClCompile Include="1874_스택수열.cpp">
       <Filter>소스 파일\BaekJoon\Structure</Filter>
     </ClCompile>
+    <ClCompile Include="1926_그림.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
