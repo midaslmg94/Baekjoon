@@ -225,5 +225,8 @@
     <ClCompile Include="2178_미로 탐색.cpp">
       <Filter>소스 파일\BaekJoon\Graph</Filter>
     </ClCompile>
+    <ClCompile Include="2504_괄호의 값.cpp">
+      <Filter>소스 파일\BaekJoon\Structure</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
