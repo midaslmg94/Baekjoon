@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\BaekJoon\Graph\DFS/BFS">
       <UniqueIdentifier>{73debfbf-f369-4a9b-b328-98551789c892}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29">
+      <UniqueIdentifier>{8bc42009-3283-4618-a99c-7fd759fb3728}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2143_두 배열의 합.cpp">
@@ -232,7 +235,10 @@
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
     <ClCompile Include="1629_곱셈.cpp">
-      <Filter>소스 파일\BaekJoon\ETC</Filter>
+      <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
+    </ClCompile>
+    <ClCompile Include="11729_하노이 탑 이동 순서.cpp">
+      <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
