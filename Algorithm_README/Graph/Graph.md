@@ -26,6 +26,8 @@
 
 - [7576_토마토](https://www.acmicpc.net/problem/7576)
 
+- [10026_적록색약](https://www.acmicpc.net/problem/10026)
+
 - [10451_순열 사이클](https://www.acmicpc.net/problem/10451)
 
 - [11724_연결요소의 개수](https://www.acmicpc.net/problem/11724)
