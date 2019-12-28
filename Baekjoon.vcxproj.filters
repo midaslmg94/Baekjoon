@@ -231,5 +231,8 @@
     <ClCompile Include="10026_적록색약.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="1629_곱셈.cpp">
+      <Filter>소스 파일\BaekJoon\ETC</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
