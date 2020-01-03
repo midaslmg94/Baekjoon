@@ -29,18 +29,18 @@ void recursion(int x, int y, int size) {
 		result++;
 		return;
 	}
-	// 1사분면 탐색
-	recursion(x, y, size / 2);
+	// 1사분면 탐색 : 재귀를 돌때마다 4개의 사분면으로 나누니까 크기가 2^-1로 줄어든다. 
+	recursion(x, y, size>>1);
 	// 2사분면 탐색
-	recursion(x, y + size / 2, size/2);
+	recursion(x, y + (size>>1), size>>1); // 연산자 우선순위 때문에 (size>>1)
 	// 3사분면 탐색
-	recursion(x + size / 2, y, size / 2);
+	recursion(x + (size>>1), y, size>>1);
 	// 4사분면 탐색
-	recursion(x + size / 2, y + size / 2, size / 2);
+	recursion(x + (size>>1), y + (size>>1), size>>1);
 }
 
 
 int main() {
 	cin >> n >> r >> c;
-	recursion(0, 0, 1 << n);
+	recursion(0, 0, 1 << n); // 1<<n 은 2의 n제곱을 의미
 }
