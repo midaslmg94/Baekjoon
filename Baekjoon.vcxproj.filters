@@ -70,6 +70,9 @@
     <Filter Include="소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29">
       <UniqueIdentifier>{8bc42009-3283-4618-a99c-7fd759fb3728}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Sorting">
+      <UniqueIdentifier>{428b2480-3a2a-43ac-92b9-9dc8d055114c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2143_두 배열의 합.cpp">
@@ -254,6 +257,21 @@
     </ClCompile>
     <ClCompile Include="2661_좋은수열.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="2631_줄세우기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2750_수 정렬하기.cpp">
+      <Filter>소스 파일\BaekJoon\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="2751_수 정렬하기 2.cpp">
+      <Filter>소스 파일\BaekJoon\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="10989_수 정렬하기 3.cpp">
+      <Filter>소스 파일\BaekJoon\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="2579_계단 오르기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,42 +1,15 @@
 #include<iostream>
 #include<algorithm>
-#include<vector>
-#include<queue>
 using namespace std;
-vector<int>map;
-vector<int>visit;
-
-bool canGo() {
-	// 3개 연속으로 가려는 경우
-
-}
-
+int dp[301][3];
+int arr[301];
 int main() {
 	int n;
 	cin >> n;
-	map.resize(n+1);
-	for (int i = n-1; i >= 0; i--) {
-		cin >> map[i];
+	// 지금 계단이 이전 계단에서  1칸 올라왔는지, 2칸 올라왔는지 확인
+	for (int i = n-1; i >=0; i--) {//  마지막을 무조건 밟기 위해 마지막부터 시작
+		cin >> arr[i];
 	}
-	map[n] = -1;
-	int sum = map[0];
-	visit.push_back(0);
-	int next;
-	for (int i = 1; i < n; i++) {
+	dp[0][0] = arr[0];
 
-
-
-
-
-		if (map[i] > map[i + 1]) { // 1칸 이동 : 연속 3칸 이동하는 것 주의
-			visit.push_back(i);
-			sum += map[i];
-		}
-		else { // 2칸 이동
-			sum += map[i + 1];
-			++i;
-		}
-	}
-
-	cout << sum;
 }
