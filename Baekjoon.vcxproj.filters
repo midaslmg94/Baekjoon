@@ -96,9 +96,6 @@
     <ClCompile Include="11727_2n타일링 2.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
-    <ClCompile Include="9215_LCS.cpp">
-      <Filter>소스 파일\BaekJoon\DP</Filter>
-    </ClCompile>
     <ClCompile Include="11726_2n타일링_정답.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
@@ -271,6 +268,9 @@
       <Filter>소스 파일\BaekJoon\Sorting</Filter>
     </ClCompile>
     <ClCompile Include="2579_계단 오르기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="9251_LCS.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
   </ItemGroup>
