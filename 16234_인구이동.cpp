@@ -1,64 +1,74 @@
 #include<iostream>
 #include<queue>
-#include<cstdlib>
 using namespace std;
 int map[50][50];
 bool visit[50][50];
-int union_map[50][50];  // 연합을 구분하기 위한 배열
-int union_flag = 1; // 연합 구분을 위한 flag
-bool finish; //  인구이동이 끝났음을 알리는 flag
 int dy[4] = { 1,-1,0,0 };
 int dx[4] = { 0,0,1,-1 };
 int	N, L, R;
-int cnt = 0; // 인구이동 횟수
-int union_country; //  연합을 이루고 있는 나라의 개수
-int union_people; // 연합의 인구수 
+/*
+4 10 50
+10 100 20 90
+80 100 60 70
+70 20 30 40
+50 20 100 10 
+정답 : 3
+*/
 
-void bfs(int y, int x, int flag) {
+
+/*
+	방문정점 초기화
+	같은 연합인지 확인
+		- 같은 연합인 경우 : 연합 국가의 개수, 연합 국가의 인구수 합 확인
+*/
+
+bool is_update = true; // 인구이동이 발생했는지 확인
+int country;// 국가의 개수
+int people; // 인구 수
+
+struct INFO{
+	int y;
+	int x;
+};
+
+
+void bfs(int y, int x) {
 	visit[y][x] = true;
-	queue<pair<int, int>>q;
+	queue<INFO>q; // 방문 위치들 담는 큐
+	queue<INFO>u; // 같은 연합의 위치를 담는 큐
 	q.push({ y,x });
-	union_country = 1; //  연합을 이루고 있는 나라의 개수
-	union_people = map[y][x]; // 연합의 인구수 
-	union_map[y][x] = flag; // 연합의 구분 
-	while (!q.empty())
-	{
-		y = q.front().first;
-		x = q.front().second;
+	u.push({ y,x });
+	people = map[y][x];
+	country = 1;
+	while (!q.empty()) {
+		y = q.front().y;
+		x = q.front().x;	
 		q.pop();
-		for (int i = 0; i < 4; i++) { // 상, 하, 우, 좌 순으로 확인
+		for (int i = 0; i < 4; i++) {
 			int ny = y + dy[i];
 			int nx = x + dx[i];
-			if (0 <= ny && ny < N && 0 <= nx && nx < N && !visit[ny][nx]) { // 경계선 내부, 방문 X 
-				int diff = abs(map[ny][nx] - map[y][x]); // 두 값의 차이
-				if (L <= diff && diff <= R) { // 서로 국경을 열 수 있음
-					visit[ny][nx] = true;
-					finish = false;
-					union_people += map[ny][nx];
-					union_country++;
-					q.push({ ny, nx });
-					union_map[ny][nx] = flag;
-				}
-			}
-		}		
-	}
-	union_flag++;
-}
-
-void moving() {
-	int new_country_people = union_people / union_country;
-	cout << "people" << union_people << endl;
-	cout << "contry" << union_country << endl;
-	cout << "new" << new_country_people<<endl;
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < N; j++) {
-			if (union_map[i][j] == union_flag) {// 같은 연합이면 인구 이동
-				map[i][j] = new_country_people;				
+			if (ny < 0 || ny >= N || nx < 0 || nx >= N) continue;
+			if (visit[ny][nx]) continue;
+			int diff = abs(map[ny][nx]-map[y][x]);
+			if (L <= diff && diff <= R) { // 인구이동 가능
+				visit[ny][nx] = true;
+				q.push({ ny,nx });
+				u.push({ ny,nx });
+				is_update = true;
+				country++;
+				people += map[ny][nx];					
 			}
 		}
 	}
+	/*여기서 인구이동을 하면 안되지 않나?..*/
+	int avg = people / country;
+	while (!u.empty()) {
+		int y = u.front().y;
+		int x = u.front().x;
+		u.pop();
+		map[y][x] = avg;
+	}
 }
-
 
 int main() {
 	ios::sync_with_stdio(false);
@@ -69,39 +79,24 @@ int main() {
 			cin >> map[i][j]; 
 		}
 	}
-	/*
-		1. 열 수 있는 국경을 열어 연합들을 만든다.--> 국경을 열수 있는지 확인 --> 국경을 하나도 열수없으면 종료. 인구이동 발생횟수 출력
-		2. 연합은 2개 이상 존재할 수 있다. --> 연합을 구분하기 위한 설정 필요
-		3. 각 연합내에서 국경이동 시작 --> 연합의 인구수의 합/연합을 이루는 칸의 개수
-		4. 인구이동 +1
-	*/
-
-	while (true) {
-		finish = true;
+	int count = 0;
+	while (is_update) {
+		int nation = 0;
+		is_update = false;
 		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (!visit[i][j]) {					
-					bfs(i, j, union_flag); // 국경을 확인, 연합 만들기
-					moving(); // 인구이동 시작					
+			for (int j = 0; j < N; j++){
+				if (!visit[i][j]) {
+					bfs(i, j);				
 				}
 			}
 		}
-		if (finish) {
-			break;
-		}
-		cnt++;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
-				visit[i][j]=false;
+				visit[i][j] = false;
 			}
 		}
-		union_flag = 1;
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				cout << map[i][j] << ' ';
-			}
-			cout << endl;
-		}
+		if(is_update)
+			count++;
 	}
-	cout << "정답:"<<cnt;
+	cout << count;
 }
