@@ -273,5 +273,11 @@
     <ClCompile Include="9251_LCS.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="9252_LCS 2.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="16234_인구이동.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
