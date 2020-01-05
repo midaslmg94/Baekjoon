@@ -7,16 +7,6 @@ int dy[4] = { 1,-1,0,0 };
 int dx[4] = { 0,0,1,-1 };
 int	N, L, R;
 /*
-4 10 50
-10 100 20 90
-80 100 60 70
-70 20 30 40
-50 20 100 10 
-정답 : 3
-*/
-
-
-/*
 	방문정점 초기화
 	같은 연합인지 확인
 		- 같은 연합인 경우 : 연합 국가의 개수, 연합 국가의 인구수 합 확인
@@ -30,7 +20,6 @@ struct INFO{
 	int y;
 	int x;
 };
-
 
 void bfs(int y, int x) {
 	visit[y][x] = true;
@@ -81,7 +70,6 @@ int main() {
 	}
 	int count = 0;
 	while (is_update) {
-		int nation = 0;
 		is_update = false;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++){
@@ -90,6 +78,7 @@ int main() {
 				}
 			}
 		}
+		/*새로 돌아야 하므로 방문 배열 초기화*/
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				visit[i][j] = false;
