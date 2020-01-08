@@ -279,5 +279,14 @@
     <ClCompile Include="9252_LCS 2.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="16234_인구이동.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="11047_동전 0.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="2217_로프.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

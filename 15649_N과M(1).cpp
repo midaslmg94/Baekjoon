@@ -1,30 +1,30 @@
 #include<iostream>
-bool check[10];
-int ans[10];
+#include<algorithm>
+#include<vector>
 using namespace std;
-void sol(int n, int m, int index) {
-	if (index == m) {//수열을 출력
-		for (int i = 0; i < m; i++) {
-			cout << ans[i] << ' ';
-		}
-		cout << '\n';
-		return;
-	}
-	for (int i = 1; i <= n; i++) {
-		if (check[i]) {
-			continue;
-		}
-		check[i] = true;
-		ans[index] = i;
-		sol(n, m, index + 1);
-		check[i] = false;
-	}
-}
-  
+
 int main() {
-	//1부터 n까지 자연수 중 중복없이 m개를 고른 수열	
 	int n, m;
 	cin >> n >> m;
-	sol(n, m, 0);
-	return 0;
+	// 1부터 n까지 자연수 중에서 중복 없이 M개를 고른 수열
+	vector<int>v(n);
+	vector<int>choice(n);
+	for (int i = 0; i < n; i++) {
+		v[i]=i+1;
+		choice[i]=0;
+	}
+	sort(v.begin(), v.end());
+	// 4개중 2개면 choice = {0,0,1,1}
+	for (int i = n-1; i >= n-m; i--) {
+		choice[i] = 1;
+	}
+	// 이렇게 하면 한번 선택된 원소는 제외된다
+	do {
+		for (int i = 0; i < n; i++) {
+			if (choice[i] == 1) {
+				cout << v[i] << ' ';
+			}
+		}
+		cout << endl;
+	} while (next_permutation(choice.begin(), choice.end()));	
 }
