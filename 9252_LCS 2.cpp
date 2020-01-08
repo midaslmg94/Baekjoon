@@ -12,13 +12,26 @@ int main() {
 		for (int j = 1; j <= s2.size(); j++) {
 			if (s1[i - 1] == s2[j - 1]) {
 				dp[i][j] = dp[i - 1][j - 1] + 1;
-				s3 += s1[i - 1];
+
 			}
 			else {
 				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
 			}
 		}
+	}	
+	int flag = 0;
+	for (int i = 1; i <= s1.size(); i++) {
+		for (int j = 1; j <= s2.size(); j++) {
+			cout << dp[i][j] << ' ';
+			if (dp[i][j] != dp[i][j - 1]) {
+				if (flag < dp[i][j]) {
+					s3 += s1[i-1];
+					flag++;
+				}
+			}
+		}
+		cout << endl;
 	}
-	cout << dp[s1.size()][s2.size()];
-	cout << endl << s3;
+cout << dp[s1.size()][s2.size()];
+cout << endl << s3;
 }
