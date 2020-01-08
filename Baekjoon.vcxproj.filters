@@ -282,5 +282,8 @@
     <ClCompile Include="11047_동전 0.cpp">
       <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
+    <ClCompile Include="2217_로프.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
