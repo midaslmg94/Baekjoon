@@ -53,10 +53,11 @@ void backtracking(int len, string s) {
 		cout << s;
 		return;
 	}
-	backtracking(len + 1, s + "1");
-	backtracking(len + 1, s + "2");
+	
+	backtracking(len, s);
+	backtracking(len + 1, s + "1");  
+	backtracking(len + 1, s + "2");   
 	backtracking(len + 1, s + "3");
-
 }
 
 int main() {

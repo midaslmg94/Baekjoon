@@ -4,7 +4,13 @@ using namespace std;
 int arr[200];
 int dp[200]; // 각 인덱스 마다 증가 수열의 길이
 
-
+/* 3 7 5 2 6 1 4 */
+/*dp[0] = 1
+	dp[1] = 1 , arr[1]>arr[0] && dp[1] <= dp[0]+1
+	dp[1] = dp[0]+1 = 2
+	dp[2] = 1, arr[2]>arr[0] && dp[2] <dp[0]+1
+	dp[2] = 2, arr[2]>arr[1] False&& 
+*/
 int main() {
 	int n;
 	cin >> n;
