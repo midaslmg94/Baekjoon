@@ -19,6 +19,7 @@ int main() {
 		}
 		else {
 			int num = stoi(tmp);
+			/* minus 부분 처리를 제대로 하지 못했었다. 또한 처음에 들어오는 수를 따로 처리하려고 생각해서 더 못풀었다*/
 			if (minus) {
 				sum -= num;
 			}
@@ -27,7 +28,7 @@ int main() {
 			}
 			tmp = "";
 
-			if (str[i] == '-') {
+			if (str[i] == '-') { 
 				minus = true;
 			}
 		}
