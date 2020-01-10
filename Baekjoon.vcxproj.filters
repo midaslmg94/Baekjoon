@@ -291,5 +291,8 @@
     <ClCompile Include="1541_잃어버린 괄호.cpp">
       <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
+    <ClCompile Include="1744_수 묶기.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
