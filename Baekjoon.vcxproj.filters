@@ -303,6 +303,12 @@
     <ClCompile Include="11728_배열 합치기.cpp">
       <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
     </ClCompile>
+    <ClCompile Include="1759_암호 만들기.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="6603_로또.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
