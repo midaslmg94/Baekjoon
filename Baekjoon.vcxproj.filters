@@ -309,6 +309,9 @@
     <ClCompile Include="6603_로또.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="6603_로또_DFS.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
