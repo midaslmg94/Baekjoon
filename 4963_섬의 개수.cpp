@@ -1,76 +1,59 @@
 #include<iostream>
-#include<vector>
 #include<queue>
+#include<string.h>
 using namespace std;
-/*
-	첫째줄 입력
-		지도의 너비 : w
-		지도의 높이 : h
-	둘째줄 입력
-		지도가 주어짐, 1:땅, 0:바다
-	입력의 마지막 줄 : 0이 2개주어짐
+int map[50][50];
+bool visit[50][50];
+int dy[8] = { 1,-1,0,  0, -1,  1, -1, 1 }; // 좌, 우 
+int dx[8] = { 0, 0, 1, -1,-1, -1,  1, 1 }; // 상, 하
+int w, h;
+int cnt = 0; // 섬의 개수
 
-	출력 : 섬의 개수를 출력
-	상하좌우대각선으로 움직임 가능
-*/
-vector<vector<int>> map;
-int visit[50][50]; 
-int dx[8] = { 0, 0, 1, -1,-1, -1,  1, 1 };
-int dy[8] = { 1,-1,0,  0, -1,  1, -1, 1 };
-
-int bfs(int x, int y, int w, int h) {
-	int island = 1;
+void bfs(int y, int x) {
+	visit[y][x] = true;
 	queue<pair<int, int>>q;
-	q.push(make_pair(x, y));
+	q.push({ y,x });
 	while (!q.empty()) {
-		x = q.front().first;
-		y = q.front().second;
+		y = q.front().first; // 이걸 int ny = q.front().first
+		x = q.front().second; // int nx = q.front().second 로 했음
 		q.pop();
 		for (int i = 0; i < 8; i++) {
-			int nx = x + dx[i];
 			int ny = y + dy[i];
-			if (0 <= nx && nx < h && 0 <= ny && ny < w)
-			{
-				if (map[nx][ny] == 1 && visit[nx][ny] == 0) {
-					island++;
-					q.push(make_pair(nx, ny));
-				}
+			int nx = x + dx[i];
+			if (0 > ny || ny >= h || 0 > nx || nx >= w || visit[ny][nx])continue;
+			if (map[ny][nx] == 1) { // 육지이면
+				q.push({ ny,nx });
+				visit[ny][nx] = true;
 			}
-		}
+		}				
 	}
-	return island;
+	cnt++;
 }
+
 int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	vector<int> tmp1;
-	vector<int> answer;
-	int w; int h;
+	cin.tie(0); cout.tie(0);
+	freopen("input.txt", "r", stdin);
 	while (true) {
 		cin >> w >> h;
-		if (w == 0 && h == 0) { break; }
-		int n;
-		/*테스트 케이스 입력*/
-		for (int i = 0; i < w; i++) {
-			for (int j = 0; j < h; j++) {
-				cin >> n;
-				tmp1.push_back(n);
-			}
-			map.push_back(tmp1);
-			tmp1.clear();
-		}
-		/*섬을 세보자*/
+		if (w == 0 && h == 0) exit(0);
+
 		for (int i = 0; i < h; i++) {
 			for (int j = 0; j < w; j++) {
-				if (map[i][j] == 1 && visit[i][j] == 0) {
-					bfs(i, j, w, h);
+				cin >> map[i][j];
+			}
+		}
+
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				if (!visit[i][j]&&map[i][j]==1) {//방문하지 않고, 육지에서만 출발
+					bfs(i, j);					
 				}
 			}
 		}
-		map.clear();
-	}
-
-	for (int i = 0; i < answer.size(); i++) {
-		cout << answer[i] << "\n";
+		cout << cnt << "\n";
+		memset(map, 0, sizeof(map));
+		memset(visit, false, sizeof(visit));
+		cnt = 0;
 	}
 }
