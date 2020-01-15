@@ -315,6 +315,9 @@
     <ClCompile Include="9663_N-Queen.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="2193_이친수.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
