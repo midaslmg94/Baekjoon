@@ -324,6 +324,12 @@
     <ClCompile Include="2110_공유기 설치.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
+    <ClCompile Include="1920_수 찾기.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="기본 코드 양식.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
