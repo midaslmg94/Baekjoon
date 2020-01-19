@@ -55,8 +55,8 @@ void moving() {//visit가 true인 곳을 움직이자(밑에서 부터 훑기)
 	for (int i = r; i >= 1; i--) {
 		for (int j = c; j >= 1; j--) {
 			if (visit[i][j] == true && map[i][j] == 'x') {
+				map[i + min_dist][j] = map[i][j];
 				map[i][j] = '.';
-				map[i + min_dist][j] = 'x';
 			}
 		}
 	}
@@ -124,7 +124,7 @@ int main() {
 	int height = 0;
 	for (int i = 0; i < n; i++) {
 		cin >> height;
-		destory(c - height + 1, left);// 높이를 배열의 인덱스로 변환, true:왼쪽, false:오른쪽
+		destory(r - height + 1, left);// 높이를 배열의 인덱스로 변환, true:왼쪽, false:오른쪽
 		left = !left;
 		memset(visit, false, sizeof(visit));
 	}
