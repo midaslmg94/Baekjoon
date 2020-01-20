@@ -330,6 +330,9 @@
     <ClCompile Include="기본 코드 양식.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1759_암호만들기_DFS.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
