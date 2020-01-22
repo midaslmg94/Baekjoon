@@ -339,6 +339,9 @@
     <ClCompile Include="2819_상근이의 로봇.cpp">
       <Filter>소스 파일\BaekJoon\ETC</Filter>
     </ClCompile>
+    <ClCompile Include="2156_포도주 시식.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
