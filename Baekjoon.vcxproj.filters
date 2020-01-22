@@ -333,6 +333,12 @@
     <ClCompile Include="1759_암호만들기_DFS.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="1012_유기농 배추.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="2819_상근이의 로봇.cpp">
+      <Filter>소스 파일\BaekJoon\ETC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">

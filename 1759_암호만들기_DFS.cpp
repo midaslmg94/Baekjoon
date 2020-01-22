@@ -17,7 +17,7 @@ void go(int index, int cnt, int mo, int ja, string s) {
 		go(index + 1, cnt + 1, mo + 1, ja, s + alpha[index]); // 모음 추가
 	else
 		go(index + 1, cnt + 1, mo, ja + 1, s + alpha[index]); // 자음 추가
-	go(index + 1, cnt, mo, ja, s); // 왜 이게 들어가지?
+	go(index + 1, cnt, mo, ja, s); // 왜 이게 들어가지? --> 예를들어 'a'가 추가되었을 때 'a'를 선택하지 않고 재귀를 돌리는 경우에 대해서 탐색을 해주기 위함
 }
 int main() {
 	cin >> L >> C;
