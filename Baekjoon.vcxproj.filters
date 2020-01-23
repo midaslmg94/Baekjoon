@@ -58,9 +58,6 @@
     <Filter Include="소스 파일\BaekJoon\Graph\Dijkstra">
       <UniqueIdentifier>{d17450e0-f0be-4703-81d6-103fe362ce87}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Graph\MST">
-      <UniqueIdentifier>{d44cb165-e14a-46d2-a4f6-0e2af5b1a59c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\BaekJoon\Structure">
       <UniqueIdentifier>{5b285fbc-3833-4257-8211-b208f0eadc5c}</UniqueIdentifier>
     </Filter>
@@ -72,6 +69,15 @@
     </Filter>
     <Filter Include="소스 파일\BaekJoon\Sorting">
       <UniqueIdentifier>{428b2480-3a2a-43ac-92b9-9dc8d055114c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\Bellman-Ford">
+      <UniqueIdentifier>{795257e1-b35d-46db-af78-adb8fcdf896f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29">
+      <UniqueIdentifier>{ae787333-bab6-4809-9c15-a9f18b0be3e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\MST%28Kruskal, Prim%29">
+      <UniqueIdentifier>{d44cb165-e14a-46d2-a4f6-0e2af5b1a59c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +181,7 @@
       <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
     </ClCompile>
     <ClCompile Include="1197_최소 스패닝 트리.cpp">
-      <Filter>소스 파일\BaekJoon\Graph\MST</Filter>
+      <Filter>소스 파일\BaekJoon\Graph\MST%28Kruskal, Prim%29</Filter>
     </ClCompile>
     <ClCompile Include="클래스, 구조체.cpp">
       <Filter>소스 파일</Filter>
@@ -353,6 +359,9 @@
     </ClCompile>
     <ClCompile Include="1764_듣보잡.cpp">
       <Filter>소스 파일\BaekJoon\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="1717_집합의 표현.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
