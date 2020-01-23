@@ -351,6 +351,9 @@
     <ClCompile Include="10816_숫자 카드2_map사용.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
+    <ClCompile Include="1764_듣보잡.cpp">
+      <Filter>소스 파일\BaekJoon\Structure</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
