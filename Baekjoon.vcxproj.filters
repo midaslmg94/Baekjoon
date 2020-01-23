@@ -342,6 +342,9 @@
     <ClCompile Include="2156_포도주 시식.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="10815_숫자 카드.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
