@@ -363,6 +363,9 @@
     <ClCompile Include="1717_집합의 표현.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
+    <ClCompile Include="11559_Puyo Puyo.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
