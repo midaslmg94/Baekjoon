@@ -375,6 +375,9 @@
     <ClCompile Include="2252_줄 세우기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Topological Sort</Filter>
     </ClCompile>
+    <ClCompile Include="SWEA_1249_보급로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
