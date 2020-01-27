@@ -82,6 +82,12 @@
     <Filter Include="소스 파일\BaekJoon\Graph\Topological Sort">
       <UniqueIdentifier>{5c67b6f7-625e-4cb0-92fa-2ff290f46ee8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\Floyd-Warshall">
+      <UniqueIdentifier>{b86346cf-8c87-4ca7-9ed2-a815a1edd56a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\BackTracking\N과M">
+      <UniqueIdentifier>{cc03f5b9-64ed-4d24-9355-cc776dace6ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2143_두 배열의 합.cpp">
@@ -377,6 +383,9 @@
     </ClCompile>
     <ClCompile Include="SWEA_1249_보급로.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15649_N과 M(1).cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
