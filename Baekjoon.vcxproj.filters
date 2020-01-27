@@ -88,6 +88,9 @@
     <Filter Include="소스 파일\BaekJoon\BackTracking\N과M">
       <UniqueIdentifier>{cc03f5b9-64ed-4d24-9355-cc776dace6ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\BackTracking\별찍기">
+      <UniqueIdentifier>{7ea4f203-bacf-47c5-8603-adfa68445076}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2143_두 배열의 합.cpp">
@@ -385,6 +388,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="15649_N과 M(1).cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
+    </ClCompile>
+    <ClCompile Include="15650_N과 M(2).cpp">
       <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
   </ItemGroup>
