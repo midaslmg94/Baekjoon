@@ -399,6 +399,12 @@
     <ClCompile Include="2206_벽 부수고 이동하기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="1922_네트워크 연결.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\MST%28Kruskal, Prim%29</Filter>
+    </ClCompile>
+    <ClCompile Include="17070_파이프 옮기기 1.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
