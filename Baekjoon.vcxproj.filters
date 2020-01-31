@@ -414,6 +414,9 @@
     <ClCompile Include="3020_개똥벌레.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
+    <ClCompile Include="5014_스타트링크.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
