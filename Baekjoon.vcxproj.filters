@@ -417,6 +417,9 @@
     <ClCompile Include="5014_스타트링크.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="10971_외판원 순회2.cpp">
+      <Filter>소스 파일\BaekJoon\Brute Force</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
