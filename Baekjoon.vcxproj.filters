@@ -79,9 +79,6 @@
     <Filter Include="소스 파일\BaekJoon\Graph\MST%28Kruskal, Prim%29">
       <UniqueIdentifier>{d44cb165-e14a-46d2-a4f6-0e2af5b1a59c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Graph\Topological Sort">
-      <UniqueIdentifier>{5c67b6f7-625e-4cb0-92fa-2ff290f46ee8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\BaekJoon\Graph\Floyd-Warshall">
       <UniqueIdentifier>{b86346cf-8c87-4ca7-9ed2-a815a1edd56a}</UniqueIdentifier>
     </Filter>
@@ -90,6 +87,9 @@
     </Filter>
     <Filter Include="소스 파일\BaekJoon\BackTracking\별찍기">
       <UniqueIdentifier>{7ea4f203-bacf-47c5-8603-adfa68445076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Graph\Topological Sort">
+      <UniqueIdentifier>{5c67b6f7-625e-4cb0-92fa-2ff290f46ee8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -419,6 +419,9 @@
     </ClCompile>
     <ClCompile Include="10971_외판원 순회2.cpp">
       <Filter>소스 파일\BaekJoon\Brute Force</Filter>
+    </ClCompile>
+    <ClCompile Include="1976_여행 가자.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
