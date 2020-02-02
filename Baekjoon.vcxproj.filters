@@ -423,6 +423,9 @@
     <ClCompile Include="1976_여행 가자.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
+    <ClCompile Include="15686_치킨 배달.cpp">
+      <Filter>소스 파일\BaekJoon\Brute Force</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
