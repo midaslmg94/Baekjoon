@@ -432,6 +432,9 @@
     <ClCompile Include="17779_게리맨더링 2.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="1987_알파벳.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
