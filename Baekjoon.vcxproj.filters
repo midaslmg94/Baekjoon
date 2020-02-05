@@ -438,6 +438,9 @@
     <ClCompile Include="14502_연구소.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="9207_페그 솔리테어.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
