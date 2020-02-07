@@ -110,12 +110,6 @@ void bfs(int x, int y, int d1, int d2) {
 			map[i][j].sector = 3;
 			//cnt[2] += map[i][j].people;
 
-void dfs(int x, int y, int d1, int d2) {
-	int up_x = x; int up_y = y; // 1번 선거구
-	int right_x = x+d1; int right_y = y + d2;// 2번 선거구 --> 오류 
-	int left_x = x+d1; int left_y = y-d2; // 3번 선거구 --> 오류 
-	int down_x = x + d1 + d2; int down_y = y - d1 + d2; //4번 선거구 --> 이상한 값 나옴
-	
 		}
 	}
 	// 4번 선거구 채우기
@@ -144,6 +138,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);	cout.tie(0);
 	freopen("input.txt", "r", stdin);
+
 	cin >> n;
 	int tmp;
 	for (int i = 1; i <= n; i++) {
