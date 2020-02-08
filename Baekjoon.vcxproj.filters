@@ -441,6 +441,9 @@
     <ClCompile Include="9207_페그 솔리테어.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="17140_이차원 배열과 연산.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
