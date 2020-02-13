@@ -6,6 +6,7 @@ using namespace std;
 int n;
 int map[MAX][MAX];
 bool visit[MAX][MAX];
+int dist[MAX][MAX];
 
 int dy[4] = { 0,0,1,-1 };
 int dx[4] = { 1,-1,0,0 };
@@ -33,15 +34,14 @@ void masking(int y, int x, int idx) { // 섬을 다른 숫자로 바꿈
 }
 
 int bfs(int y, int x) {// 최단거리 찾기
-	int dist = 0;
 	queue<pair<int, int>>q;
-	q.push({ y,x });
-	visit[y][x] = true;
+	q.push({ y,x });	
 	int flag = map[y][x]; // 출발한 섬의 정보
 	while (!q.empty()) {
 		y = q.front().first;
 		x = q.front().second;
 		q.pop();
+		dist[y][x]++;
 		for (int k = 0; k < 4; k++) {// 좌, 우, 하, 상
 			int ny = y + dy[k];
 			int nx = x + dx[k];
@@ -49,17 +49,16 @@ int bfs(int y, int x) {// 최단거리 찾기
 				visit[ny][nx] = true;
 				if (map[ny][nx] != flag) {
 					if (map[ny][nx] == 0) { // 다리를 이음
-						dist++;
+						dist[ny][nx] = dist[y][x] + 1;
 					}
 					else { // 새로운 섬에 도착
-						return dist;
+						return dist[ny][nx];
 					}
 				}
 				q.push({ ny,nx });
 			}
 		}
-	}
-	return dist;
+	}	
 }
 
 int main() {
@@ -81,12 +80,12 @@ int main() {
 		}
 	}
 	memset(visit, false, sizeof(visit));
+	memset(dist, -1, sizeof(dist));
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (map[i][j] != 0) {
 				int dist = bfs(i, j);
 				min_dist = min(dist, min_dist);
-				//memset(visit, false, sizeof(visit));
 			}
 		}
 	}
