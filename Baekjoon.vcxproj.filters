@@ -52,9 +52,6 @@
     <Filter Include="소스 파일\BaekJoon\Deque">
       <UniqueIdentifier>{44e4088b-2c50-4bfc-a06d-7ff686ca526e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Segement Tree">
-      <UniqueIdentifier>{3ae7edb3-b723-498d-831a-437921d4cbe5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\BaekJoon\Graph\Dijkstra">
       <UniqueIdentifier>{d17450e0-f0be-4703-81d6-103fe362ce87}</UniqueIdentifier>
     </Filter>
@@ -90,6 +87,9 @@
     </Filter>
     <Filter Include="소스 파일\BaekJoon\Graph\Topological Sort">
       <UniqueIdentifier>{5c67b6f7-625e-4cb0-92fa-2ff290f46ee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Segement Tree">
+      <UniqueIdentifier>{3ae7edb3-b723-498d-831a-437921d4cbe5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
