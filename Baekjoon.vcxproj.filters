@@ -459,6 +459,9 @@
     <ClCompile Include="1138_한 줄로서기.cpp">
       <Filter>소스 파일\BaekJoon\Greedy</Filter>
     </ClCompile>
+    <ClCompile Include="1476_날짜 계산.cpp">
+      <Filter>소스 파일\BaekJoon\Greedy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
