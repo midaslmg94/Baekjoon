@@ -114,6 +114,7 @@ void dfs(int cctv_idx) {
 			update(dir, y, x);
 		}
 		dfs(cctv_idx + 1); 		
+		memcpy(map, backup, sizeof(map));
 	}
 }
 int main() {
@@ -125,8 +126,8 @@ int main() {
 		for (int j = 0; j < m; j++) {
 			cin >> map[i][j];
 			if (map[i][j] != 0 && map[i][j] != 6) {
-				cctv[cctv_size].y = j;
-				cctv[cctv_size].x = i;
+				cctv[cctv_size].y = i;
+				cctv[cctv_size].x = j;
 				cctv[cctv_size].type = map[i][j];
 				cctv_size++;
 			}
