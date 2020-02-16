@@ -465,6 +465,9 @@
     <ClCompile Include="11053_가장 긴 증가하는 부분 수열.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="15683_감시.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
