@@ -468,6 +468,9 @@
     <ClCompile Include="15683_감시.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="1620_나는야 포켓몬 마스터 이다솜.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
