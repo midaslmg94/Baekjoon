@@ -477,6 +477,9 @@
     <ClCompile Include="2583_영역 구하기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="2468_안전영역.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
