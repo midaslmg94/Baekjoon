@@ -345,9 +345,6 @@
     <ClCompile Include="1920_수 찾기.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
-    <ClCompile Include="기본 코드 양식.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1759_암호만들기_DFS.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
@@ -470,6 +467,15 @@
     </ClCompile>
     <ClCompile Include="1620_나는야 포켓몬 마스터 이다솜.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="init.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="17281_야구.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="2583_영역 구하기.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
