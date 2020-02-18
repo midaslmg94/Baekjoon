@@ -468,9 +468,6 @@
     <ClCompile Include="1620_나는야 포켓몬 마스터 이다솜.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
-    <ClCompile Include="init.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="17281_야구.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
@@ -484,6 +481,9 @@
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
     <ClCompile Include="7562_나이트의 이동.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="9019_DSLR.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
   </ItemGroup>
