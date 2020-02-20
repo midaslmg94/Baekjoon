@@ -12,7 +12,9 @@ int budget;
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
+	freopen("input.txt", "r", stdin);
 	cin >> n;
+
 	vector<int>v;
 	for (int i = 0; i < n; i++) {
 		int tmp; cin >> tmp;
