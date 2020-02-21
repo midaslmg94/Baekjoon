@@ -1,76 +1,68 @@
 #include<iostream>
 #include<queue>
-#define MAX 1001
+#include<string.h>
+#define MAX 1000
 using namespace std;
+struct INFO
+{
+	int y;
+	int x;
+	int block;
+	int dist;
+};
 int n, m;
-int map[MAX][MAX];
-bool visit[MAX][MAX];
+int map[MAX][MAX];//  입력받은 원본
+bool visit[MAX][MAX]; //  벽을 부순적이 있는지
+bool is_finish = false; // 도착 경로가 하나라도 있다면
 int dy[4] = { 0,0,-1,1 };
 int dx[4] = { 1,-1,0,0 };
-
-int destoryWall = 1;
-bool canGo(int y, int x) {
-	bool flag = false;
-	for (int k = 0; k < 4; k++) {
-		int ny = y + dy[k];
-		int nx = x + dx[k];
-		if (0 <= ny && ny < n && 0 <= nx && nx < m && !visit[ny][nx]&& map[ny][nx] == 0) {// 한 군데라도 갈수잇음
-			flag = true;
-			return flag;
-		}
-	}
-	return flag;
-}
-
-void destory() {
-
-}
-// 벽은 상하좌우 다 부셔봐야 함
-void bfs(int y, int x) {
-	queue<pair<int, int>>q;
+int bfs(int y, int x) {//(0,0)부터시작	
+	queue<INFO>q;
 	q.push({ y,x });
 	visit[y][x] = true;
-	int dist = 1;
+
 	while (!q.empty()) {
 		y = q.front().first;
 		x = q.front().second;
 		q.pop();
-		if (canGo(y, x)) { // 한 군데라도 뚫려있다면
-			for (int k = 0; k < 4; k++) {
-				int ny = y + dy[k];
-				int nx = x + dx[k];
-				if (0 <= ny && ny < n && 0 <= nx && nx < m && !visit[ny][nx] && map[ny][nx]==0) {
-					q.push({ ny, nx });
-					visit[ny][nx] = true;
+		for (int k = 0; k < 4; k++) {
+			int ny = dy[k] + y;
+			int nx = dx[k] + x;
+			if (0 <= ny && ny < n && 0 <= nx && nx < m && backup[ny][nx] == 0 && !visit[ny][nx]) {
+				q.push({ ny,nx });
+				visit[ny][nx] = true;
+				dist[ny][nx] += dist[y][x];
+				if (ny == n - 1 && nx == m - 1) {//끝까지 도착
+					is_finish = true;
+					return dist[ny][nx];
 				}
 			}
 		}
-		else { // 벽을 하나 부셔야함
-			bool flag = false;
-			for (int k = 0; k < 4; k++) {// 벽을 하나 부시고도 탈출할 수 없는 경우 : -1 출력하고 종료
-				int ny = y + dy[k];
-				int nx = x + dx[k];
-				if (0 <= ny && ny < n && 0 <= nx && nx < m && !visit[ny][nx]) {
-					map[ny][nx] = 0;
-				}
-				flag = canGo(ny, nx);
-			}
-		}
-		dist++;
+	}
+	// 도착 못함
+	if (!is_finish) {
+		return 987654321;
 	}
 }
-
-
 int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(0);	cout.tie();
+	cin.tie(0); cout.tie(0);
 	freopen("input.txt", "r", stdin);
-
-	cin >> n, m;
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= m; j++) {
-			cin >> map[i][j];
+	cin >> n >> m;
+	queue<pair<int, int>>wall;
+	int tmp;
+	for (int i = 0; i < n; i++) {
+		string str; // 입력이 공백없이 들어옴
+		cin >> str;
+		for (int j = 0; j < m; j++) {
+			tmp = str[j] - '0';
+			map[i][j] = tmp;
+			if (tmp == 1) {
+				wall.push({ i,j });
+			}
 		}
 	}
-	bfs(1, 1);
+	int result = 987564;
+	bfs(0, 0);
+	cout << result;
 }
