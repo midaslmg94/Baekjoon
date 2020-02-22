@@ -5,6 +5,7 @@
 using namespace std;
 int arr[MAX];
 int dp[MAX];
+vector<int>v_dp;
 int ans = 0;
 int main() {
 	ios::sync_with_stdio(false);
@@ -15,15 +16,15 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> arr[i];
 	}
-	dp[0] = 1;
+	v_dp.push_back(arr[0]);
 	for (int i = 1; i < n; i++) {
-		dp[i] = 1;
-		for (int j = 0; j < i; j++) {
-			if (arr[i] > arr[j] && dp[i] < dp[j] + 1) {
-				dp[i] = dp[j] + 1;
-			}
+		if (v_dp.back() < arr[i]) {//더 큰 값이 들어옴
+			v_dp.push_back(arr[i]);
 		}
-		ans = max(dp[i],ans);
+		else { // 더 작은 값이 들어옴 
+			auto pos = lower_bound(v_dp.begin(), v_dp.end(),arr[i]);
+			*pos = arr[i];
+		}
 	}
-	cout << ans;
+	cout << v_dp.size();
 }
