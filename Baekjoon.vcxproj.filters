@@ -495,6 +495,9 @@
     <ClCompile Include="5567_결혼식.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="14503_로봇 청소기.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
