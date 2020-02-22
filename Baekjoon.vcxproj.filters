@@ -498,6 +498,9 @@
     <ClCompile Include="14503_로봇 청소기.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="1965_상자넣기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
