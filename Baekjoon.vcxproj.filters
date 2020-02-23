@@ -501,6 +501,9 @@
     <ClCompile Include="1965_상자넣기.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="2343_기타레슨.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
