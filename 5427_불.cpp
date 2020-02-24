@@ -52,8 +52,8 @@ void bfs() {
 				int fire_ny = fire_y + dy[k];
 				int fire_nx = fire_x + dx[k];
 				if (0 > fire_ny || fire_ny >= h || 0 > fire_nx || fire_nx >= w) continue;
-				if (map[fire_ny][fire_nx] != '#') { // 벽이 아니라면 불이 붙는다
-					map[fire_ny][fire_nx] = '*';
+				if (map[fire_ny][fire_nx] != '#' && map[fire_ny][fire_nx] != '*') { // 벽이 아니라면 불이 붙는다
+					map[fire_ny][fire_nx] = '*';					
 					fire.push({ fire_ny,fire_nx }); // 새롭게 확산된 불의 위치 저장
 				}
 			}
@@ -76,8 +76,8 @@ void bfs() {
 				if (map[ny][nx] == '#' || map[ny][nx] == '*' || visit[ny][nx] == true) continue; // 진행방향이 벽, 불, 방문했던 위치			
 				map[ny][nx] = '@';
 				sang.push({ ny,nx });
-				is_move = true;
 				visit[ny][nx] = true;
+				is_move = true;
 			}
 		}
 		result++;
