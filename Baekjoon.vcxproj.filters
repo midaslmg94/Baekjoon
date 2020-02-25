@@ -504,6 +504,9 @@
     <ClCompile Include="2343_기타레슨.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
+    <ClCompile Include="1302_베스트셀러.cpp">
+      <Filter>소스 파일\BaekJoon\Structure</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
