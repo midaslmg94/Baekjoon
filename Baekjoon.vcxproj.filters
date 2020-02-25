@@ -507,6 +507,9 @@
     <ClCompile Include="1302_베스트셀러.cpp">
       <Filter>소스 파일\BaekJoon\Structure</Filter>
     </ClCompile>
+    <ClCompile Include="17406_배열 돌리기4.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
