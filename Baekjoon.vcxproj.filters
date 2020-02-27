@@ -523,7 +523,10 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="2468_안전영역_DFS.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="17472_다리 만들기2.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
