@@ -528,6 +528,9 @@
     <ClCompile Include="17472_다리 만들기2.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
+    <ClCompile Include="1647_도시 분할 계획.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
