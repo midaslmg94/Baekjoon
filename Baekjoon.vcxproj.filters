@@ -532,6 +532,9 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="1261_알고스팟.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="18429_근손실.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
