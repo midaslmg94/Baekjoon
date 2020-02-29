@@ -543,6 +543,9 @@
     <ClCompile Include="18352_특정 거리의 도시 찾기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="18428_감시 피하기.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
