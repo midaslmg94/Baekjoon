@@ -75,19 +75,18 @@ int attack(vector<int>my_archer) {
 		// 적이 아래로 한칸씩 이동
 		for (int i = n - 1; i >= 0; i--) {
 			for (int j = 0; j < m; j++) {
-				if (backup[i][j].state == 1) {
-					if (i == n - 1) {
-						backup[i][j].state = 0;
-						backup[i][j].isAttacked = 0;
-					}
-					else {						
-						backup[i][j].state = 0;
-						backup[i][j].isAttacked = false;
-						backup[i + 1][j].state = 1;
-						backup[i + 1][j].isAttacked = false;
-					}
+				if (i == n - 1) {
+					backup[i][j].state = 0;
+					backup[i][j].isAttacked = 0;
+				}
+				else {
+					backup[i + 1][j] = backup[i][j];
 				}
 			}
+		}
+		for (int j = 0; j < m; j++) {
+			backup[0][j].state = 0;
+			backup[0][j].isAttacked = 0;
 		}
 	}
 	return kill;
