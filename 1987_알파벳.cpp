@@ -1,41 +1,57 @@
 #include<iostream>
 #include<algorithm>
-#define MAX 20+1
+#define MAX 20
 using namespace std;
 char map[MAX][MAX];
-int r, c;
-int dy[4] = { 0,0,-1,1 };
+bool visit[MAX][MAX];
+bool alpha[26]; // 해당 알파벳이 쓰였는지
+int result = -1;
+int dy[4] = { 0,0,1,-1 };
 int dx[4] = { 1,-1,0,0 };
-bool visit[27]; // 'A' = 65 , 'B' = 66 ... 'Z' = 90  --> index로 바꿈
-int cnt = 1;
-int res = 1;
-void dfs(int y, int x, int cnt) {
-	int idx = map[y][x] - 64;
-	visit[idx] = true;
-	for (int k = 0; k < 4; k++) {
-		int ny = y + dy[k];
-		int nx = x + dx[k];
-		int n_idx = map[ny][nx]-64;
-		if (0 <= ny && ny < r && 0 <= nx && nx < c && !visit[n_idx]) {
-			visit[n_idx] = true;		
-			dfs(ny, nx, cnt+1);
-			visit[n_idx] = false; // 왜 이부분을 넣지?
-		}
+int r, c;
+bool is_move = true;
+void dfs(int y, int x, int depth) {
+	// 탈출조건이 뭘까 더이상 전진할 곳이 없을 경우!
+	if (is_move == false) {
+		cout << result << endl;
+		return;
 	}
-	res = max(res, cnt); // 왜 res?..
+	result = max(result, depth);
+	char cur_alpha = map[y][x];
+	int cur_idx = cur_alpha - 65;
+	visit[y][x] = true;
+	alpha[cur_idx] = true;
+	for (int k = 0; k < 4; k++) {
+		int ny = dy[k] + y;
+		int nx = dx[k] + x;
+		if (0 > ny || ny >= r || 0 > nx || nx >= c || visit[ny][nx] == true) continue;
+		char next_alpha = map[ny][nx];
+		int next_idx = next_alpha - 65;
+		if (alpha[next_idx] == true) {
+			is_move = false;
+			continue;
+		}
+		is_move = true;
+		visit[ny][nx] = true;
+		alpha[next_idx] = true;
+		dfs(ny, nx, depth + 1);
+		visit[ny][nx] = false;
+		alpha[next_idx] = false;
+	}
 }
+
 
 int main() {
 	ios::sync_with_stdio(false);
-	cin.tie(0);	cout.tie();
-	freopen("input.txt", "r", stdin);
+	cin.tie(0);	cout.tie(0);
 	cin >> r >> c;
+	string str;
 	for (int i = 0; i < r; i++) {
-		string tmp; cin >> tmp;
+		cin >> str;
 		for (int j = 0; j < c; j++) {
-			map[i][j] = tmp[j];
+			map[i][j] = str[j];
 		}
 	}
-	dfs(0, 0,1);
-	cout << res;
+	dfs(0, 0, 1);
+	cout << result;
 }
