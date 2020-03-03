@@ -567,6 +567,9 @@
     <ClCompile Include="15651_N과 M%283%29.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
+    <ClCompile Include="15652_N과 M(4).cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
