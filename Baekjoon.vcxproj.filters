@@ -546,9 +546,6 @@
     <ClCompile Include="18428_감시 피하기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
-    <ClCompile Include="18430_무기 공학.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="17135_캐슬 디펜스.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
@@ -557,6 +554,15 @@
     </ClCompile>
     <ClCompile Include="11048_이동하기.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="18430_무기 공학.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="코드 템플릿.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1477_휴게소 세우기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
