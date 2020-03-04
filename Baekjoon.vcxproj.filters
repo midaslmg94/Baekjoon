@@ -571,6 +571,9 @@
       <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
     <ClCompile Include="1937_욕심쟁이 판다.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1005_ACM Craft.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
