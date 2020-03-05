@@ -94,6 +94,12 @@
     <Filter Include="소스 파일\BaekJoon\실패, 블로그 참조">
       <UniqueIdentifier>{8ae908bc-611a-4990-a71e-8c3f3a20ab93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조">
+      <UniqueIdentifier>{81c14cd9-8502-4194-8fd2-0d2451714708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\실패, 블로그 참조\실패">
+      <UniqueIdentifier>{93faa41c-3d4b-461a-9b7b-0417df028a31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2143_두 배열의 합.cpp">
@@ -471,68 +477,8 @@
     <ClCompile Include="DFS로 순열, 조합 구하기.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
-    <ClCompile Include="1389_케빈 베이컨의 6단계 법칙.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="14501_퇴사.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="14890_경사로.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="16235_나무 재테크.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="17140_이차원 배열과 연산.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="2110_공유기 설치.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="2133_타일 채우기.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="2206_벽 부수고 이동하기.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="2869_달팽이는 올라가고 싶다.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="2933_미네랄.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="9019_DSLR.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="9207_페그 솔리테어.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="9663_N-Queen.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="실패_2211_네트워크 복구.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="17144_미세먼지 안녕.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="9465_스티커.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="1520_내리막 길.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
     <ClCompile Include="2468_안전영역_DFS.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
-    </ClCompile>
-    <ClCompile Include="17472_다리 만들기2.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="1647_도시 분할 계획.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
-    <ClCompile Include="1261_알고스팟.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="18429_근손실.cpp">
       <Filter>소스 파일\BaekJoon\Combination&amp;Permutation</Filter>
@@ -555,14 +501,8 @@
     <ClCompile Include="11048_이동하기.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
-    <ClCompile Include="18430_무기 공학.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
-    </ClCompile>
     <ClCompile Include="코드 템플릿.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1477_휴게소 세우기.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="15651_N과 M%283%29.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
@@ -570,11 +510,77 @@
     <ClCompile Include="15652_N과 M(4).cpp">
       <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
-    <ClCompile Include="1937_욕심쟁이 판다.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조</Filter>
+    <ClCompile Include="1261_알고스팟.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1477_휴게소 세우기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1520_내리막 길.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="1005_ACM Craft.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1389_케빈 베이컨의 6단계 법칙.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1647_도시 분할 계획.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1937_욕심쟁이 판다.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="2110_공유기 설치.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2133_타일 채우기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2206_벽 부수고 이동하기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2869_달팽이는 올라가고 싶다.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2933_미네랄.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="9019_DSLR.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="9207_페그 솔리테어.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="9465_스티커.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="9663_N-Queen.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="14501_퇴사.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="14890_경사로.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="16235_나무 재테크.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="17140_이차원 배열과 연산.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="17144_미세먼지 안녕.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="17472_다리 만들기2.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="18430_무기 공학.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2211_네트워크 복구.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
