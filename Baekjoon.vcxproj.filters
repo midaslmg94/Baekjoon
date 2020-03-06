@@ -588,6 +588,9 @@
     <ClCompile Include="17144_미세먼지 안녕.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="1238_파티.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
