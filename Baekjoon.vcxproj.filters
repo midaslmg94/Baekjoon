@@ -582,14 +582,17 @@
     <ClCompile Include="1300_K번째 수.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
-    <ClCompile Include="2151_거울 설치.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
-    </ClCompile>
     <ClCompile Include="17144_미세먼지 안녕.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
     <ClCompile Include="1238_파티.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="2151_거울 설치.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1072_게임.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
