@@ -598,7 +598,10 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
     <ClCompile Include="16637_괄호 추가하기.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1208_부분수열의 합2.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
