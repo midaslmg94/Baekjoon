@@ -603,6 +603,9 @@
     <ClCompile Include="1208_부분수열의 합2.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
+    <ClCompile Include="14938_서강 그라운드.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
