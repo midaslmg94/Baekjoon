@@ -609,6 +609,9 @@
     <ClCompile Include="12019_동아리방 청소!.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="1365_꼬인 전깃줄.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
