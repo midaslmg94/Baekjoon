@@ -615,6 +615,9 @@
     <ClCompile Include="2075_N번째 큰 수.cpp">
       <Filter>소스 파일\BaekJoon\Priority Queue</Filter>
     </ClCompile>
+    <ClCompile Include="14567_선수과목.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
