@@ -281,6 +281,7 @@
     <ClCompile Include="17135_캐슬 디펜스.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="17142_연구소 3.cpp" />
     <ClCompile Include="17406_배열 돌리기4.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

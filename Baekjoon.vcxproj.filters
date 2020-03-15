@@ -621,6 +621,9 @@
     <ClCompile Include="6087_레이저 통신.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
+    <ClCompile Include="17142_연구소 3.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
