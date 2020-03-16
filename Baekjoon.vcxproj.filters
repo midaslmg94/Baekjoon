@@ -261,9 +261,6 @@
     <ClCompile Include="1074_Z.cpp">
       <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
     </ClCompile>
-    <ClCompile Include="1992_쿼드트리.cpp">
-      <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
-    </ClCompile>
     <ClCompile Include="2661_좋은수열.cpp">
       <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
     </ClCompile>
@@ -622,7 +619,13 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="17142_연구소 3.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1992_쿼드트리.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2630_색종이 만들기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
