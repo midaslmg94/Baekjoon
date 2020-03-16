@@ -630,6 +630,9 @@
     <ClCompile Include="1034_램프.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="2458_키 순서.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
