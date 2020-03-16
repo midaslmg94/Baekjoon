@@ -1,7 +1,7 @@
 #include<iostream>
 #include<algorithm>
 #define MAX 101
-#define INF 100001
+#define INF 987654321
 using namespace std;
 int arr[MAX][MAX];
 int result[MAX][MAX];
