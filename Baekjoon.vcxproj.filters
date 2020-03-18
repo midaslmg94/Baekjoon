@@ -603,9 +603,6 @@
     <ClCompile Include="16637_괄호 추가하기.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
-    <ClCompile Include="12019_동아리방 청소!.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="1365_꼬인 전깃줄.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
@@ -627,9 +624,6 @@
     <ClCompile Include="2630_색종이 만들기.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
-    <ClCompile Include="1034_램프.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="2458_키 순서.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
@@ -638,6 +632,15 @@
     </ClCompile>
     <ClCompile Include="2573_빙산.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="1034_램프.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="12019_동아리방 청소!.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="12869_뮤탈리스크.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
