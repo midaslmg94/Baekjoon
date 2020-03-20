@@ -651,6 +651,9 @@
     <ClCompile Include="16988_Baaaaaaaaaduk2 (Easy).cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="4485_녹색 옷 입은 애가 젤다지.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
