@@ -84,7 +84,7 @@ int bfs() {
 			for (int j = 0; j < m; j++) {
 				if (backup[i][j].state == 0)continue;
 				if (backup[i][j].red == backup[i][j].green) {
-					if (backup[i][j].red == -1|| backup[i][j].green==-1)continue;
+					if (backup[i][j].red == -1 || backup[i][j].green==-1)continue;
 					backup[i][j].flower = true;
 				}
 			}
@@ -136,7 +136,7 @@ void dfs(int idx, int cnt) {
 		}
 		// ¹è¾ç¾×À» ½É´Â ¶¥ Áß¿¡ ÃÊ·Ïor»¡°­ ¹è¾ç¾×À» »Ñ¸± ¶¥À» °í¸§ --> ³ØÆÛ¹Â·Î ÇØ¾ßÇÏ³ª..
 		choice_color(0, 0);
-		memset(nutrients_visit, false, sizeof(nutrients_visit));
+		//memset(nutrients_visit, false, sizeof(nutrients_visit));
 		return;
 	}
 	for (int i = idx; i < candi_space.size(); i++) {

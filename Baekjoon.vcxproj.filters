@@ -654,11 +654,11 @@
     <ClCompile Include="4485_녹색 옷 입은 애가 젤다지.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
     </ClCompile>
-    <ClCompile Include="2번 - Gaaaaaaaaaarden.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="소스.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="2번 - Gaaaaaaaaaarden.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
