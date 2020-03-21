@@ -46,6 +46,7 @@ int bfs() {
 			backup[red_y][red_x].red = spread_time;
 			backup_visit[red_y][red_x] = true;
 			red_space.pop();
+			if (backup[red_y][red_x].flower == true)continue; // 꽃이 핀 곳이면 제외
 			for (int k = 0; k < 4; k++) {
 				int red_ny = red_y + dy[k];
 				int red_nx = red_x + dx[k];
@@ -65,6 +66,7 @@ int bfs() {
 			backup[y][x].green = spread_time;
 			backup_visit[y][x] = true;
 			green_space.pop();
+			if (backup[y][x].flower == true)continue; // 꽃이 핀 곳이면 제외
 			for (int k = 0; k < 4; k++) {
 				int ny = y + dy[k];
 				int nx = x + dx[k];
@@ -72,7 +74,7 @@ int bfs() {
 				if (backup_visit[ny][nx])continue; // 방문지점
 				if (backup[ny][nx].state == 0)continue; // 호수에는 확산 불가
 				if (backup[ny][nx].flower == true)continue;// 꽃이 핀 지점에는 확산 불가				
-				backup[ny][nx].green = spread_time + 1;
+				backup[ny][nx].green = spread_time + 1; 
 				green_space.push({ ny,nx });
 			}		
 		}
