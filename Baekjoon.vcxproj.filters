@@ -534,9 +534,6 @@
     <ClCompile Include="2133_타일 채우기.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
-    <ClCompile Include="2206_벽 부수고 이동하기.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
-    </ClCompile>
     <ClCompile Include="2869_달팽이는 올라가고 싶다.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
@@ -571,9 +568,6 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
     <ClCompile Include="18430_무기 공학.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
-    </ClCompile>
-    <ClCompile Include="2211_네트워크 복구.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
     <ClCompile Include="17144_미세먼지 안녕.cpp">
@@ -659,6 +653,15 @@
     </ClCompile>
     <ClCompile Include="16562_친구비.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
+    </ClCompile>
+    <ClCompile Include="13904_과제.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2211_네트워크 복구.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="2206_벽 부수고 이동하기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
