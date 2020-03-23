@@ -91,13 +91,13 @@
     <Filter Include="소스 파일\BaekJoon\실패, 블로그 참조\실패">
       <UniqueIdentifier>{93faa41c-3d4b-461a-9b7b-0417df028a31}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Greedy\BackTracking">
+    <Filter Include="소스 파일\BaekJoon\BackTracking">
       <UniqueIdentifier>{7db9be2c-0e9a-46dd-8a85-3fabbd113ca9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Greedy\BackTracking\N과M">
+    <Filter Include="소스 파일\BaekJoon\BackTracking\N과M">
       <UniqueIdentifier>{cc03f5b9-64ed-4d24-9355-cc776dace6ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\BaekJoon\Greedy\BackTracking\별찍기">
+    <Filter Include="소스 파일\BaekJoon\BackTracking\별찍기">
       <UniqueIdentifier>{7ea4f203-bacf-47c5-8603-adfa68445076}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -262,7 +262,7 @@
       <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
     </ClCompile>
     <ClCompile Include="2661_좋은수열.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="2631_줄세우기.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
@@ -313,13 +313,13 @@
       <Filter>소스 파일\BaekJoon\Divide&amp;Conquer%28Recursion%29</Filter>
     </ClCompile>
     <ClCompile Include="1759_암호 만들기.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="6603_로또.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="6603_로또_DFS.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="2193_이친수.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
@@ -328,7 +328,7 @@
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
     <ClCompile Include="1759_암호만들기_DFS.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="1012_유기농 배추.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
@@ -367,10 +367,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="15649_N과 M(1).cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking\N과M</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
     <ClCompile Include="15650_N과 M(2).cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking\N과M</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
     <ClCompile Include="1697_숨바꼭질.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
@@ -406,7 +406,7 @@
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
     <ClCompile Include="1987_알파벳.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="14502_연구소.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
@@ -502,10 +502,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="15651_N과 M%283%29.cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking\N과M</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
     <ClCompile Include="15652_N과 M(4).cpp">
-      <Filter>소스 파일\BaekJoon\Greedy\BackTracking\N과M</Filter>
+      <Filter>소스 파일\BaekJoon\BackTracking\N과M</Filter>
     </ClCompile>
     <ClCompile Include="1261_알고스팟.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
@@ -662,6 +662,9 @@
     </ClCompile>
     <ClCompile Include="2206_벽 부수고 이동하기.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="2210_숫자판 점프.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
