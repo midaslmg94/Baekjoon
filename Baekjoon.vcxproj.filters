@@ -666,6 +666,9 @@
     <ClCompile Include="2210_숫자판 점프.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="14889_스타트와 링크.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
