@@ -672,6 +672,9 @@
     <ClCompile Include="14497_주난의 난.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="15661_링크와 스타트.cpp">
+      <Filter>소스 파일\BaekJoon\BackTracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
