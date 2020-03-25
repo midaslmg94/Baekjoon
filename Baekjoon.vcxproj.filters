@@ -654,9 +654,6 @@
     <ClCompile Include="16562_친구비.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
-    <ClCompile Include="13904_과제.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="2211_네트워크 복구.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
@@ -676,6 +673,9 @@
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
     <ClCompile Include="15486_퇴사 2.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
+    <ClCompile Include="1495_기타리스트.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
