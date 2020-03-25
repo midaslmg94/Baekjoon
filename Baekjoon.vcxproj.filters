@@ -675,6 +675,9 @@
     <ClCompile Include="15661_링크와 스타트.cpp">
       <Filter>소스 파일\BaekJoon\BackTracking</Filter>
     </ClCompile>
+    <ClCompile Include="15486_퇴사 2.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
