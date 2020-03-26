@@ -34,11 +34,12 @@ void mergeParent(int n1, int n2) {
 		return;
 }
 bool cmp(const TOWER& a, const TOWER& b) {
-	if (a.y < b.y) {
+
+	if (a.scope > b.scope) {
 		return true;
 	}
-	else if(a.y==b.y){
-		if (a.x < b.x)
+	else if (a.scope == b.scope) {
+		if (a.y < b.y)
 			return true;
 		else
 			return false;
@@ -59,7 +60,7 @@ int main() {
 			tower.push_back({ y,x,scope });
 			parent[i] = i;
 		}
-		sort(tower.begin(),tower.end(), cmp); // 0,0 부터 차례대로 오름차순
+		sort(tower.begin(), tower.end(), cmp); // 0,0 부터 차례대로 오름차순
 		for (int i = 0; i < n; i++) {
 			int y = tower[i].y;
 			int x = tower[i].x;
@@ -70,25 +71,19 @@ int main() {
 				int nx = tower[j].x;
 				int nscope = tower[j].scope;
 				int dist = ((ny - y) * (ny - y)) + ((nx - x) * (nx - x)); // 두 점 사이의 거리
-				int dist_scope = (scope + nscope)*(scope + nscope); // 원 사이의 거리 --> 루트를 안하기 위해 제곱해줌								
+				int dist_scope = (scope + nscope) * (scope + nscope); // 원 사이의 거리 --> 루트를 안하기 위해 제곱해줌								
 				if (dist <= dist_scope) { // 두 점 사이의 거리가 더 작다 --> 두 부대는 통신 가능(하나의 그룹)				
-					//if (findParent(parent[i]) != findParent(parent[j])) {
-						mergeParent(parent[i], parent[j]);
-					//}
+					mergeParent(parent[i], parent[j]);					
 				}
 			}
 		}
 		// 몇개의 집합으로 나뉘었는 지 확인
-		sort(parent, parent + n);
-		/*for (int i = 0; i < n; i++) {
-			cout << parent[i] << ' '; 
+		for (int i = 0; i < n; i++) {
+			cout << parent[i] << ' ';
 		}
-		cout << endl;*/
-		//for (int i = 0; i < n; i++) {
-		//	parent[i] = findParent(i); // 왜?..
-		//}
+		cout << endl;
 
-		for (int i = 0; i < n-1; i++) {			
+		for (int i = 0; i < n - 1; i++) { // 부모 노드의 개수를 찾는 것
 			if (parent[i] != parent[i + 1]) {
 				answer++;
 			}
