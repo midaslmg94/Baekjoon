@@ -648,9 +648,6 @@
     <ClCompile Include="4485_녹색 옷 입은 애가 젤다지.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Dijkstra</Filter>
     </ClCompile>
-    <ClCompile Include="2번 - Gaaaaaaaaaarden.cpp">
-      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
-    </ClCompile>
     <ClCompile Include="16562_친구비.cpp">
       <Filter>소스 파일\BaekJoon\Graph\Union-Find%28Disjoint-set%29</Filter>
     </ClCompile>
@@ -686,6 +683,15 @@
     </ClCompile>
     <ClCompile Include="6236_용돈관리.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="18808_스티커 붙이기.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="18809_Gaaaaaaaaaarden.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1719_택배.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
