@@ -1,10 +1,6 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
-#include<queue>
-#include<deque>
-#include<string.h>
+#include<bits/stdc++.h>
 #define endl "\n"
+#define MAX 10
 using namespace std;
 
 int main() {	
