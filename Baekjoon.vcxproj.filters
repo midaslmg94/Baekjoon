@@ -693,6 +693,9 @@
     <ClCompile Include="1719_택배.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
+    <ClCompile Include="9461_파도반 수열.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
