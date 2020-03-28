@@ -411,9 +411,6 @@
     <ClCompile Include="14502_연구소.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
-    <ClCompile Include="11561_징검다리.cpp">
-      <Filter>소스 파일\BaekJoon\Search</Filter>
-    </ClCompile>
     <ClCompile Include="2146_다리 만들기.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
@@ -695,6 +692,9 @@
     </ClCompile>
     <ClCompile Include="9461_파도반 수열.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="11561_징검다리.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
