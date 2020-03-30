@@ -697,7 +697,10 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="2636_치즈.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="14627_파닭파닭.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
