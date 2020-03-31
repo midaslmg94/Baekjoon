@@ -708,6 +708,9 @@
     <ClCompile Include="17141_연구소2.cpp">
       <Filter>소스 파일\BaekJoon\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="16946_벽 부수고 이동하기 4.cpp">
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
