@@ -711,6 +711,12 @@
     <ClCompile Include="16946_벽 부수고 이동하기 4.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
     </ClCompile>
+    <ClCompile Include="2406_안정적인 네트워크.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="12851_숨바꼭질 2.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
