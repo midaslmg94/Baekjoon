@@ -717,6 +717,12 @@
     <ClCompile Include="12851_숨바꼭질 2.cpp">
       <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="2758_로또.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="2776_암기왕.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
