@@ -723,12 +723,21 @@
     <ClCompile Include="2869_달팽이는 올라가고 싶다.cpp">
       <Filter>소스 파일\BaekJoon\Search</Filter>
     </ClCompile>
-    <ClCompile Include="17836_공주님을 구해라!.cpp">
+    <ClCompile Include="2174_로봇 시뮬레이션.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="17836_공주님을 구해라!.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="2660_회장뽑기.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\Floyd-Warshall</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="output.txt">
       <Filter>리소스 파일</Filter>
     </Text>
   </ItemGroup>
