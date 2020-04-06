@@ -18,7 +18,7 @@ int main() {
 		cin >> soldier[i];
 	}
 	
-	int result = 0;
+	int result = 1;
 	
 	dp[0] = 1;
 	for (int i = 1; i < n; i++) {
