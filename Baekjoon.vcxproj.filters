@@ -739,7 +739,10 @@
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
     <ClCompile Include="16198_에너지 모으기.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\실패, 블로그 참조\실패</Filter>
+    </ClCompile>
+    <ClCompile Include="1600_말이 되고픈 원숭이.cpp">
+      <Filter>소스 파일\BaekJoon\Graph\DFS/BFS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
