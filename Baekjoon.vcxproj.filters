@@ -747,6 +747,9 @@
     <ClCompile Include="13975_파일 합치기3.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
+    <ClCompile Include="10836_여왕벌.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
