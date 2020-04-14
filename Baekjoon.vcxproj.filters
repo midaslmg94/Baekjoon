@@ -753,6 +753,15 @@
     <ClCompile Include="14226_이모티콘.cpp">
       <Filter>소스 파일\BaekJoon\실패, 블로그 참조\블로그 참조</Filter>
     </ClCompile>
+    <ClCompile Include="1079_마피아.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1195_킥다운.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="17780_새로운 게임.cpp">
+      <Filter>소스 파일\BaekJoon\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
