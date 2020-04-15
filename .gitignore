@@ -13,6 +13,7 @@ init.cpp
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 *.txt
+*.exe
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
