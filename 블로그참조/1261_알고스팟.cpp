@@ -13,7 +13,7 @@ int dy[4] = { 0,0,-1,1 };
 int dx[4] = { 1,-1,0,0 };
 int wall = 0;
 void dijkstra(int y, int x) {
-	priority_queue<ppii, vector<ppii>, greater<ppii>>pq; // ÃÖ¼ÒÈü - ±úÆ®¸° º®À» ±âÁØÀ¸·Î 
+	priority_queue<ppii, vector<ppii>, greater<ppii>>pq; // ìµœì†Œí™ - ê¹¨íŠ¸ë¦° ë²½ì„ ê¸°ì¤€ìœ¼ë¡œ 
 	pq.push({ 0,{0,0} });
 	visit[0][0] = true;
 	while (!pq.empty()) {
@@ -21,16 +21,16 @@ void dijkstra(int y, int x) {
 		y = pq.top().second.first;
 		x = pq.top().second.second;
 		pq.pop();
-		if (y == n - 1 && x == m - 1) // ¸¶Áö¸·¿¡ µµÂø 
+		if (y == n - 1 && x == m - 1) // ë§ˆì§€ë§‰ì— ë„ì°© 
 			return;
 		for (int k = 0; k < 4; k++) {
 			int ny = y + dy[k];
 			int nx = x + dx[k];
 			if (0 > ny || ny >= n || 0 > nx || nx >= m || visit[ny][nx]) continue;
-			if (map[ny][nx] == 0) { // ºó °÷ÀÎ °æ¿ì
+			if (map[ny][nx] == 0) { // ë¹ˆ ê³³ì¸ ê²½ìš°
 				pq.push({ wall,{ny,nx} });
 			}
-			else { // º®ÀÏ °æ¿ì
+			else { // ë²½ì¼ ê²½ìš°
 				pq.push({ wall + 1,{ny,nx} });
 			}
 			visit[ny][nx] = true;

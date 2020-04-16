@@ -31,7 +31,7 @@ int main() {
 	while (t--) {
 		cin >> n >> k;
 		for (int i = 1; i <= n; i++) {
-			cin >> building[i]; // °¢ °Ç¹°À» ¸¸µå´Âµ¥ µå´Â ½Ã°£
+			cin >> building[i]; // ê° ê±´ë¬¼ì„ ë§Œë“œëŠ”ë° ë“œëŠ” ì‹œê°„
 		}
 		for (int i = 0; i < k; i++) {
 			cin >> b1 >> b2;
@@ -45,10 +45,10 @@ int main() {
 				}
 			}
 			if (flag) {
-				q.push(i); // ½ÃÀÛÁöÁ¡ »ğÀÔ
+				q.push(i); // ì‹œì‘ì§€ì  ì‚½ì…
 			}
 		}
-		cin >> w; // ½Â¸®ÇÏ±â À§ÇØ Áö¾î¾ßÇÒ °Ç¹°
+		cin >> w; // ìŠ¹ë¦¬í•˜ê¸° ìœ„í•´ ì§€ì–´ì•¼í•  ê±´ë¬¼
 		bfs();		
 		memset(visit, false, sizeof(visit));
 		memset(graph, false, sizeof(graph));
