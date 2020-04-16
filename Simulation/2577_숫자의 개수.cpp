@@ -1,12 +1,12 @@
 #include<iostream>
-#include<string.h> // memset Çì´õ
+#include<string.h> // memset í—¤ë”
 using namespace std;
 
 int main() {
 	int a, b, c;
 	cin >> a >> b >> c;
 	int ans[10];
-	int res = a * b * c;  // ÃÖ´ë 10¾ï
+	int res = a * b * c;  // ìµœëŒ€ 10ì–µ
 	
 	memset(ans, 0, sizeof(ans));
 	while (res) {

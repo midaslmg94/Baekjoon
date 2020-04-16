@@ -9,13 +9,13 @@ int blue = 0;
 void dfs(int y, int x, int len) {
 	int color = map[y][x];
 	for (int i = y; i < y + len; i++) { // y+len 
-		for (int j = x; j < x + len; j++) { // x+len ÀÌ ¹üÀ§¸¦ »ý°¢ ¸øÇÔ.. 
+		for (int j = x; j < x + len; j++) { // x+len ì´ ë²”ìœ„ë¥¼ ìƒê° ëª»í•¨.. 
 			if (color != map[i][j]) {
-				dfs(y, x, len / 2); // ÁÂ»ó´Ü
-				dfs(y, x + len / 2, len / 2); // ¿ì»ó´Ü
-				dfs(y + len / 2, x, len / 2); // ÁÂÇÏ´Ü
-				dfs(y + len / 2, x + len / 2, len / 2); // ¿ìÇÏ´Ü
-				return; // ¿©±â¿¡ return ³Ö±â
+				dfs(y, x, len / 2); // ì¢Œìƒë‹¨
+				dfs(y, x + len / 2, len / 2); // ìš°ìƒë‹¨
+				dfs(y + len / 2, x, len / 2); // ì¢Œí•˜ë‹¨
+				dfs(y + len / 2, x + len / 2, len / 2); // ìš°í•˜ë‹¨
+				return; // ì—¬ê¸°ì— return ë„£ê¸°
 			}
 		}
 	}
@@ -31,7 +31,7 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		vector<int>tmp;
 		for (int j = 0; j < n; j++) {
-			cin >> val; // 0:ÇÏ¾á»ö, 1:ÆÄ¶õ»ö
+			cin >> val; // 0:í•˜ì–€ìƒ‰, 1:íŒŒëž€ìƒ‰
 			tmp.push_back(val);
 		}
 		map.push_back(tmp);

@@ -4,24 +4,24 @@
 using namespace std;
 int map[50][50];
 bool visit[50][50];
-int dy[8] = { 1,-1,0,  0, -1,  1, -1, 1 }; // ÁÂ, ¿ì 
-int dx[8] = { 0, 0, 1, -1,-1, -1,  1, 1 }; // »ó, ÇÏ
+int dy[8] = { 1,-1,0,  0, -1,  1, -1, 1 }; // ì¢Œ, ìš° 
+int dx[8] = { 0, 0, 1, -1,-1, -1,  1, 1 }; // ìƒ, í•˜
 int w, h;
-int cnt = 0; // ¼¶ÀÇ °³¼ö
+int cnt = 0; // ì„¬ì˜ ê°œìˆ˜
 
 void bfs(int y, int x) {
 	visit[y][x] = true;
 	queue<pair<int, int>>q;
 	q.push({ y,x });
 	while (!q.empty()) {
-		y = q.front().first; // ÀÌ°É int ny = q.front().first
-		x = q.front().second; // int nx = q.front().second ·Î ÇßÀ½
+		y = q.front().first; // ì´ê±¸ int ny = q.front().first
+		x = q.front().second; // int nx = q.front().second ë¡œ í–ˆìŒ
 		q.pop();
 		for (int i = 0; i < 8; i++) {
 			int ny = y + dy[i];
 			int nx = x + dx[i];
 			if (0 > ny || ny >= h || 0 > nx || nx >= w || visit[ny][nx])continue;
-			if (map[ny][nx] == 1) { // À°ÁöÀÌ¸é
+			if (map[ny][nx] == 1) { // ìœ¡ì§€ì´ë©´
 				q.push({ ny,nx });
 				visit[ny][nx] = true;
 			}
@@ -46,7 +46,7 @@ int main() {
 
 		for (int i = 0; i < h; i++) {
 			for (int j = 0; j < w; j++) {
-				if (!visit[i][j]&&map[i][j]==1) {//¹æ¹®ÇÏÁö ¾Ê°í, À°Áö¿¡¼­¸¸ Ãâ¹ß
+				if (!visit[i][j]&&map[i][j]==1) {//ë°©ë¬¸í•˜ì§€ ì•Šê³ , ìœ¡ì§€ì—ì„œë§Œ ì¶œë°œ
 					bfs(i, j);					
 				}
 			}

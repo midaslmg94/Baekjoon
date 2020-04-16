@@ -23,15 +23,15 @@ void bfs(int x, int y) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
 			if (0 <= nx && nx < N && 0 <= ny && ny < N) {
-				if (cur == 'R' && map[nx][ny] == 'R' && !visit[nx][ny]) { // »¡°£ Ä­
+				if (cur == 'R' && map[nx][ny] == 'R' && !visit[nx][ny]) { // Å¥Ä„Â°Å Ã„Â­
 					q.push({ nx, ny });
 					visit[nx][ny] = true;
 				}
-				else if (cur == 'B' && map[nx][ny] == 'B' && !visit[nx][ny]) { // ÆÄ¶õ Ä­
+				else if (cur == 'B' && map[nx][ny] == 'B' && !visit[nx][ny]) { // Ä†Ã„Å›Å‘ Ã„Â­
 					q.push({ nx, ny });
 					visit[nx][ny] = true;
 				}
-				else if (cur == 'G' && map[nx][ny] == 'G' && !visit[nx][ny]) { // ³ì»ö Ä­
+				else if (cur == 'G' && map[nx][ny] == 'G' && !visit[nx][ny]) { // Å‚Ä›Å¥Ã¶ Ã„Â­
 					q.push({ nx, ny });
 					visit[nx][ny] = true;
 				}
@@ -42,7 +42,7 @@ void bfs(int x, int y) {
 
 int main() {
 	cin >> N;
-	// ÀÏ¹İÀÎ 
+	// Å”ÄÅ¡ÃÅ”Ã 
 	for (int i = 0; i < N; i++) {
 		string str;
 		cin >>str;
@@ -61,10 +61,10 @@ int main() {
 		}
 	}
 	
-	// »ö¾à
+	// Å¥Ã¶Å¾Å•
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			if (map[i][j] == 'G') { // ³ì»öÀ» »¡°£»öÀ¸·Î ´Ù ¹Ù²Ş
+			if (map[i][j] == 'G') { // Å‚Ä›Å¥Ã¶Å”Å¥ Å¥Ä„Â°ÅÅ¥Ã¶Å”Â¸Ë‡Ã Â´Å® Å¡Å®Ë›Å¢
 				map[i][j] = 'R';
 			}
 			visit[i][j] = false;

@@ -3,10 +3,10 @@
 #define MAX 100
 using namespace std;
 int n, m;
-// ¹Ù±ù°ø±â¿Í ³»ºÎ°ø±â¸¦ µû·Î °ü¸®ÇÏ´Â°Ô Áß¿ä
+// ë°”ê¹¥ê³µê¸°ì™€ ë‚´ë¶€ê³µê¸°ë¥¼ ë”°ë¡œ ê´€ë¦¬í•˜ëŠ”ê²Œ ì¤‘ìš”
 int dy[4] = { -1,1,0,0 };
 int dx[4] = { 0,0,-1,1 };
-int cheese[MAX][MAX]; // 0:ºó°ø°£, 1:Ä¡Áî, 2:¹Ù±ù°ø±â, 3:³ìÀ» Ä¡Áî
+int cheese[MAX][MAX]; // 0:ë¹ˆê³µê°„, 1:ì¹˜ì¦ˆ, 2:ë°”ê¹¥ê³µê¸°, 3:ë…¹ì„ ì¹˜ì¦ˆ
 bool visit[MAX][MAX];
 enum { EMPTY = 0, CHEESE, AIR, PREAIR };
 void bfs_air() {
@@ -63,7 +63,7 @@ int main() {
 	int cheese_cnt = 0;
 	int answer = 0;
 	while (true) {
-		// Ä¡Áî°¡ ³ì¾Æ ¾ø¾îÁ³´ÂÁö È®ÀÎ
+		// ì¹˜ì¦ˆê°€ ë…¹ì•„ ì—†ì–´ì¡ŒëŠ”ì§€ í™•ì¸
 		bool isClear = true;
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
@@ -72,28 +72,28 @@ int main() {
 				}
 			}
 		}
-		// Ä¡Áî°¡ ÀüºÎ ³ì¾Ò´Ù¸é °á°ú Ãâ·Â ÈÄ Á¾·á
+		// ì¹˜ì¦ˆê°€ ì „ë¶€ ë…¹ì•˜ë‹¤ë©´ ê²°ê³¼ ì¶œë ¥ í›„ ì¢…ë£Œ
 		if (isClear) {
 			cout << answer << endl;
 			cout << cheese_cnt;
 			return 0;
 		}		
-		bfs_air();// ¹Ù±ù°ø±â Ã¼Å©		
+		bfs_air();// ë°”ê¹¥ê³µê¸° ì²´í¬		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				cout << cheese[i][j] << ' ';
 			}
 			cout << endl;
 		}
-		bfs_melting();// Ä¡Áî ³ìÀÌ±â
-		// ³²Àº Ä¡Áî °³¼ö ¼¼±â
+		bfs_melting();// ì¹˜ì¦ˆ ë…¹ì´ê¸°
+		// ë‚¨ì€ ì¹˜ì¦ˆ ê°œìˆ˜ ì„¸ê¸°
 		cheese_cnt = 0;
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				if (cheese[i][j] == CHEESE) cheese_cnt++;
 			}
 		}
-		// 1½Ã°£ Áö³²
+		// 1ì‹œê°„ ì§€ë‚¨
 		answer++;
 		return 0;
 	}

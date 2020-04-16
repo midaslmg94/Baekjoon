@@ -4,8 +4,8 @@
 #define INF 987564;
 using namespace std;
 struct INFO {
-	int num; // È¸¿ø¹øÈ£
-	int rank; // Á¡¼ö
+	int num; // íšŒì›ë²ˆí˜¸
+	int rank; // ì ìˆ˜
 };
 int people[MAX][MAX];
 INFO candi[MAX];
@@ -26,7 +26,7 @@ bool cmp(const INFO& a, const INFO& b) {
 	return false;
 }
 void floyd() {
-	for (int k = 1; k <= n; k++) { // °ÅÃÄ°¡´Â ³ëµå
+	for (int k = 1; k <= n; k++) { // ê±°ì³ê°€ëŠ” ë…¸ë“œ
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (people[i][j] > people[i][k] + people[k][j])
@@ -55,7 +55,7 @@ int main() {
 	}
 	floyd();
 
-	// Á¤´ä ±¸ÇÏ´Â°Ô ³Ñ ´õ·¯¿îµ¥..
+	// ì •ë‹µ êµ¬í•˜ëŠ”ê²Œ ë„˜ ë”ëŸ¬ìš´ë°..
 	int candi_num = 0;
 	int min_rank = INF;
 	vector<int>candi;

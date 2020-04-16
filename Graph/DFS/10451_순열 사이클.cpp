@@ -8,9 +8,9 @@ int arr[1001];
 int cnt = 0;	
 int ans = 0;
 int dfs(int idx) {
-	if (graph[idx][0] == idx) { // ·çÇÁÀÎ °æ¿ì
+	if (graph[idx][0] == idx) { // ë£¨í”„ì¸ ê²½ìš°
 		visited[idx] = true;
-		cnt=1; // ·çÇÁÀÇ °æ¿ì 
+		cnt=1; // ë£¨í”„ì˜ ê²½ìš° 
 		return cnt;
 	}
 	int next = graph[idx][0];
@@ -40,7 +40,7 @@ int main() {
 		}
 		cout << ans <<endl;
 
-		// ÃÊ±âÈ­ 
+		// ì´ˆê¸°í™” 
 		for (int i = 1; i <= size; i++) {
 			visited[i] = false;
 			graph[i].clear();

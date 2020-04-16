@@ -5,10 +5,10 @@
 #define MAX 8
 using namespace std;
 int n, m;
-// 0Àº ºó Ä­, 1Àº º®, 2´Â ¹ÙÀÌ·¯½º°¡ ÀÖ´Â À§Ä¡
+// 0ì€ ë¹ˆ ì¹¸, 1ì€ ë²½, 2ëŠ” ë°”ì´ëŸ¬ìŠ¤ê°€ ìˆëŠ” ìœ„ì¹˜
 int map[MAX][MAX];
 bool visit[MAX][MAX];
-bool virous[MAX][MAX]; // ¹ÙÀÌ·¯½º È®»ê ¿©ºÎ Ã¼Å©
+bool virous[MAX][MAX]; // ë°”ì´ëŸ¬ìŠ¤ í™•ì‚° ì—¬ë¶€ ì²´í¬
 int dy[4] = { 0,0,-1,1 };
 int dx[4] = { 1,-1,0,0 };
 int min_virous = 987654;
@@ -40,7 +40,7 @@ int spread() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			if (map[i][j] == 2 && virous[i][j]!=true) {
-				area += bfs(i, j); // È®»êÀ» ÇÑ ¹ÙÀÌ·¯½ºÀÇ °³¼ö
+				area += bfs(i, j); // í™•ì‚°ì„ í•œ ë°”ì´ëŸ¬ìŠ¤ì˜ ê°œìˆ˜
 			}
 		}
 	}
@@ -61,13 +61,13 @@ int main() {
 	cin >> n >> m;
 	int tmp;
 	vector<int>select;
-	int wall = 0; // º®ÀÇ °³¼ö
+	int wall = 0; // ë²½ì˜ ê°œìˆ˜
 	
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cin >> tmp;
 			map[i][j] = tmp;
-			if (tmp == 0) { //  º®À» ¼¼¿ï ¼ö ÀÖ´Â À§Ä¡
+			if (tmp == 0) { //  ë²½ì„ ì„¸ìš¸ ìˆ˜ ìˆëŠ” ìœ„ì¹˜
 				possible.push_back({ i,j });
 				select.push_back(0);
 			}
@@ -76,7 +76,7 @@ int main() {
 			}
 		}
 	}
-	wall += 3; // º®Àº 3°³ ´õ ¼¼¿ò
+	wall += 3; // ë²½ì€ 3ê°œ ë” ì„¸ì›€
 	select.pop_back();
 	select.pop_back();
 	select.pop_back();
@@ -89,21 +89,21 @@ int main() {
 	do
 	{
 		for (int i = 0; i < select.size(); i++) {
-			if (select[i] == 1) {// º®À» ¼¼¿ï ¼ö ÀÖ´Â À§Ä¡´Â 3°³ --> ¸ğµç ÁöÁ¡¿¡ 3? 8*=8 = 64C3 ==> ³ØÆÛ¹Â : 4¸¸1Ãµ
+			if (select[i] == 1) {// ë²½ì„ ì„¸ìš¸ ìˆ˜ ìˆëŠ” ìœ„ì¹˜ëŠ” 3ê°œ --> ëª¨ë“  ì§€ì ì— 3? 8*=8 = 64C3 ==> ë„¥í¼ë®¤ : 4ë§Œ1ì²œ
 				//cout << possible[i].first << ',' << possible[i].second << ' ';
 				int y = possible[i].first;
 				int x = possible[i].second;
 				map[y][x] = 1;
-				visit[y][x] = true; // º®ÀÌ »õ·Î ¼¼¿öÁ³À¸¸é Ã¼Å©
+				visit[y][x] = true; // ë²½ì´ ìƒˆë¡œ ì„¸ì›Œì¡Œìœ¼ë©´ ì²´í¬
 			}
 		}
-		virous_area = spread(); // 3°³ÀÇ º®À» ¼¼¿ì°í ¹ÙÀÌ·¯½º°¡ ÆÛÁø µÚ, ÆÛÁø±¸¿ªÀÌ ¸î°³ ÀÖ³ª È®ÀÎ
+		virous_area = spread(); // 3ê°œì˜ ë²½ì„ ì„¸ìš°ê³  ë°”ì´ëŸ¬ìŠ¤ê°€ í¼ì§„ ë’¤, í¼ì§„êµ¬ì—­ì´ ëª‡ê°œ ìˆë‚˜ í™•ì¸
 		min_virous = min(min_virous, virous_area);
-		init();// ¼¼¿ü´ø º® ÃÊ±âÈ­1
-		memset(visit, false, sizeof(visit)); // ¼¼¿ü´ø º® ÃÊ±âÈ­2
-		memset(virous, false, sizeof(virous)); // È®»ê ¹ÙÀÌ·¯½º ÃÊ±âÈ­
+		init();// ì„¸ì› ë˜ ë²½ ì´ˆê¸°í™”1
+		memset(visit, false, sizeof(visit)); // ì„¸ì› ë˜ ë²½ ì´ˆê¸°í™”2
+		memset(virous, false, sizeof(virous)); // í™•ì‚° ë°”ì´ëŸ¬ìŠ¤ ì´ˆê¸°í™”
 	} while (next_permutation(select.begin(), select.end()));
 
-	int res = (n * m) - min_virous - wall; // ¾ÈÀü±¸¿ª=ÀüÃ¼ ¸ÊÅ©±â - ¹ÙÀÌ·¯½º°¡ ÃÖ¼Ò·Î ÆÛÁø °³¼ö - º®ÀÇ °³¼ö
+	int res = (n * m) - min_virous - wall; // ì•ˆì „êµ¬ì—­=ì „ì²´ ë§µí¬ê¸° - ë°”ì´ëŸ¬ìŠ¤ê°€ ìµœì†Œë¡œ í¼ì§„ ê°œìˆ˜ - ë²½ì˜ ê°œìˆ˜
 	cout << res;
 }

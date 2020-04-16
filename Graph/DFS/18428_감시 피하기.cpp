@@ -7,34 +7,34 @@
 #define endl "\n"
 using namespace std;
 char map[MAX][MAX];
-char backup[MAX][MAX]; // Àå¾Ö¹° ¼¼¿ì´À¶ó Á¶ÀÛÇÒ Áöµµ
-vector<pair<int, int>>space; // ºó °ø°£ : Àå¾Ö¹°ÀÌ µé¾î°¥ °÷
-vector<pair<int, int>>teacher; // ¼±»ı´ÔÀÇ À§Ä¡
+char backup[MAX][MAX]; // ì¥ì• ë¬¼ ì„¸ìš°ëŠë¼ ì¡°ì‘í•  ì§€ë„
+vector<pair<int, int>>space; // ë¹ˆ ê³µê°„ : ì¥ì• ë¬¼ì´ ë“¤ì–´ê°ˆ ê³³
+vector<pair<int, int>>teacher; // ì„ ìƒë‹˜ì˜ ìœ„ì¹˜
 
 bool visit[MAX * MAX];
 int n;
 bool findStudent() {	
-	bool isFind = false;  // ÇĞ»ıÀ» ¹ß°ßÇÏ¿´´ÂÁö
+	bool isFind = false;  // í•™ìƒì„ ë°œê²¬í•˜ì˜€ëŠ”ì§€
 	for (int i = 0; i < teacher.size(); i++) {
 		int ty = teacher[i].first;
 		int tx = teacher[i].second;
-		bool findRight = true; bool findLeft = true;  // ÇØ´ç ¹æÇâ¿¡ Àå¾Ö¹°ÀÌ ÀÖ´Ù¸é ´õ Å½»ö X 
+		bool findRight = true; bool findLeft = true;  // í•´ë‹¹ ë°©í–¥ì— ì¥ì• ë¬¼ì´ ìˆë‹¤ë©´ ë” íƒìƒ‰ X 
 		bool findUp = true; bool findDown = true;
 		for (int dir = 1; dir < n; dir++) {
-			if (tx + dir < n && findRight) { // ¿À¸¥ÂÊÀ¸·Î È®ÀÎ
-				if (backup[ty][tx + dir] == 'O') { // Àå¾Ö¹°
+			if (tx + dir < n && findRight) { // ì˜¤ë¥¸ìª½ìœ¼ë¡œ í™•ì¸
+				if (backup[ty][tx + dir] == 'O') { // ì¥ì• ë¬¼
 					findRight = false;
 					isFind = false;
 				}
-				else if (backup[ty][tx + dir] == 'S') { // ÇĞ»ı
+				else if (backup[ty][tx + dir] == 'S') { // í•™ìƒ
 					isFind = true;
 					return true;
 				}
-				else { // ºó°ø°£
+				else { // ë¹ˆê³µê°„
 					isFind = false;
 				}
 			}
-			if (tx - dir >= 0 && findLeft) { // ¿ŞÂÊÀ¸·Î È®ÀÎ
+			if (tx - dir >= 0 && findLeft) { // ì™¼ìª½ìœ¼ë¡œ í™•ì¸
 				if (backup[ty][tx - dir] == 'O') {
 					findLeft = false;
 					isFind = false;
@@ -47,7 +47,7 @@ bool findStudent() {
 					isFind = false;
 				}
 			}
-			if (ty + dir < n && findDown) { // ¾Æ·¡ÂÊÀ¸·Î È®ÀÎ
+			if (ty + dir < n && findDown) { // ì•„ë˜ìª½ìœ¼ë¡œ í™•ì¸
 				if (backup[ty + dir][tx] == 'O') {
 					findDown = false;
 					isFind = false;					
@@ -60,7 +60,7 @@ bool findStudent() {
 					isFind = false;
 				}
 			}
-			if (ty - dir >= 0 && findUp) { // À§ÂÊÀ¸·Î È®ÀÎ
+			if (ty - dir >= 0 && findUp) { // ìœ„ìª½ìœ¼ë¡œ í™•ì¸
 				if (backup[ty - dir][tx] == 'O') {
 					findUp = false;
 					isFind = false;
@@ -79,7 +79,7 @@ bool findStudent() {
 }
 
 void dfs(int idx, int depth) {
-	if (depth == 3) { // 3°³ÀÇ Àå¾Ö¹°ÀÇ À§Ä¡¸¦ °ñ¶úÀ½
+	if (depth == 3) { // 3ê°œì˜ ì¥ì• ë¬¼ì˜ ìœ„ì¹˜ë¥¼ ê³¨ëìŒ
 		memcpy(backup, map, sizeof(backup));
 		for (int i = 0; i < space.size(); i++) {
 			if (visit[i]) {
@@ -95,7 +95,7 @@ void dfs(int idx, int depth) {
 		return;
 	}
 
-	// ºó °ø°£¿¡¼­ Àå¾Ö¹°ÀÌ µé¾î°¥ À§Ä¡ °í¸£±â (Á¶ÇÕ)
+	// ë¹ˆ ê³µê°„ì—ì„œ ì¥ì• ë¬¼ì´ ë“¤ì–´ê°ˆ ìœ„ì¹˜ ê³ ë¥´ê¸° (ì¡°í•©)
 	for (int i = idx; i < space.size(); i++) {
 		if (visit[i]) continue;
 		visit[i] = true;

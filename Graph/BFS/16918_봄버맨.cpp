@@ -12,7 +12,7 @@ int dx[5] = { 0,0,0,-1,1 };
 int r, c, n;
 int main() {
 	ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-	freopen("input.txt", "r", stdin);
+	//freopen("input.txt", "r", stdin);
 	cin >> r >> c >> n;
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < c; j++) {
@@ -23,7 +23,7 @@ int main() {
 	}
 	int curTime = 1;
 	while (curTime<n) {
-		// ∆¯≈∫¿Ã ∫Û ∫Œ∫–ø° ∆¯≈∫¿Ã ªı∑Œ ª˝±Ë			
+		// Ìè≠ÌÉÑÏù¥ Îπà Î∂ÄÎ∂ÑÏóê Ìè≠ÌÉÑÏù¥ ÏÉàÎ°ú ÏÉùÍπÄ			
 		curTime++;
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
@@ -35,7 +35,7 @@ int main() {
 		}
 		if (curTime == n)break;
 		curTime++;
-		// «ˆ¿Á Ω√∞£∫∏¥Ÿ 3√ ¿¸ø° ∏∏µÈæÓ¡¯ ∆¯≈∫¿Ã ∆¯πﬂ«‘
+		// ÌòÑÏû¨ ÏãúÍ∞ÑÎ≥¥Îã§ 3Ï¥àÏ†ÑÏóê ÎßåÎì§Ïñ¥ÏßÑ Ìè≠ÌÉÑÏù¥ Ìè≠Î∞úÌï®
 		queue<pair<int, int>>q;
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
@@ -44,12 +44,12 @@ int main() {
 						int ny = i + dy[k];
 						int nx = j + dx[k];
 						if (0 > ny || ny >= r || 0 > nx || nx >= c)continue;
-						q.push({ ny,nx }); // ≈•ø° æ»≥÷∞Ì πŸ∑Œ πŸ≤Ÿ¥œ ø¿¥‰¿Ã ∂πæ˙¿Ω
+						q.push({ ny,nx });
 					}
 				}
 			}
 		}
-		while (!q.empty()) { 
+		while (!q.empty()) {
 			int y = q.front().first;
 			int x = q.front().second;
 			arr[y][x].state = '.';

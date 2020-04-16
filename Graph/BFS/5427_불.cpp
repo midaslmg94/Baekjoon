@@ -6,18 +6,18 @@
 using namespace std;
 
 struct INFO {
-	bool visit; // ¹æ¹®Çß´ÂÁö
-	bool next_fire; // ´ÙÀ½¿¡ ºÒ ³¯ À§Ä¡ÀÎ°¡
+	bool visit; // ë°©ë¬¸í–ˆëŠ”ì§€
+	bool next_fire; // ë‹¤ìŒì— ë¶ˆ ë‚  ìœ„ì¹˜ì¸ê°€
 };
 
 int t;
 int w, h;
-int result; // Á¤´ä
+int result; // ì •ë‹µ
 bool visit[MAX][MAX];
 char map[MAX][MAX];
 //INFO visit[MAX][MAX];
-queue<pair<int, int>>sang;// »ó±ÙÀÌÀÇ À§Ä¡
-queue<pair<int, int>>fire;// ºÒÀÇ À§Ä¡
+queue<pair<int, int>>sang;// ìƒê·¼ì´ì˜ ìœ„ì¹˜
+queue<pair<int, int>>fire;// ë¶ˆì˜ ìœ„ì¹˜
 int dy[4] = { 0,0,1,-1 };
 int dx[4] = { 1,-1,0,0 };
 void ptr() {
@@ -32,7 +32,7 @@ void ptr() {
 
 void bfs() {
 	while(!sang.empty()) {		
-		// »ó±ÙÀÌ°¡ Å»Ãâ °¡´ÉÇÑ À§Ä¡ÀÎÁö?
+		// ìƒê·¼ì´ê°€ íƒˆì¶œ ê°€ëŠ¥í•œ ìœ„ì¹˜ì¸ì§€?
 		/*for (int i = 0; i < sang.size(); i++) {
 			int sang_y = sang[i].first;
 			int sang_x = sang[i].second;
@@ -41,7 +41,7 @@ void bfs() {
 				return;
 			}
 		}*/
-		// ºÒ È®»ê, À§Ä¡ ÀúÀå
+		// ë¶ˆ í™•ì‚°, ìœ„ì¹˜ ì €ì¥
 		bool is_move = false;
 		int fire_size = fire.size();
 		for (int i = 0; i < fire_size; i++) {
@@ -52,13 +52,13 @@ void bfs() {
 				int fire_ny = fire_y + dy[k];
 				int fire_nx = fire_x + dx[k];
 				if (0 > fire_ny || fire_ny >= h || 0 > fire_nx || fire_nx >= w) continue;
-				if (map[fire_ny][fire_nx] != '#' && map[fire_ny][fire_nx] != '*') { // º®ÀÌ ¾Æ´Ï¶ó¸é ºÒÀÌ ºÙ´Â´Ù
+				if (map[fire_ny][fire_nx] != '#' && map[fire_ny][fire_nx] != '*') { // ë²½ì´ ì•„ë‹ˆë¼ë©´ ë¶ˆì´ ë¶™ëŠ”ë‹¤
 					map[fire_ny][fire_nx] = '*';					
-					fire.push({ fire_ny,fire_nx }); // »õ·Ó°Ô È®»êµÈ ºÒÀÇ À§Ä¡ ÀúÀå
+					fire.push({ fire_ny,fire_nx }); // ìƒˆë¡­ê²Œ í™•ì‚°ëœ ë¶ˆì˜ ìœ„ì¹˜ ì €ì¥
 				}
 			}
 		}
-		// »ó±ÙÀÌ ÀÌµ¿, À§Ä¡ ÀúÀå
+		// ìƒê·¼ì´ ì´ë™, ìœ„ì¹˜ ì €ì¥
 		int sang_size = sang.size();
 		for (int i = 0; i < sang_size; i++) {
 			int y = sang.front().first;
@@ -72,8 +72,8 @@ void bfs() {
 			for (int k = 0; k < 4; k++) {
 				int ny = y + dy[k];
 				int nx = x + dx[k];
-				if (0 > ny || ny >= h || 0 > nx || nx >= w) continue; // ÁøÇà¹æÇâÀÌ ¹üÀ§ ÃÊ°ú
-				if (map[ny][nx] == '#' || map[ny][nx] == '*' || visit[ny][nx] == true) continue; // ÁøÇà¹æÇâÀÌ º®, ºÒ, ¹æ¹®Çß´ø À§Ä¡			
+				if (0 > ny || ny >= h || 0 > nx || nx >= w) continue; // ì§„í–‰ë°©í–¥ì´ ë²”ìœ„ ì´ˆê³¼
+				if (map[ny][nx] == '#' || map[ny][nx] == '*' || visit[ny][nx] == true) continue; // ì§„í–‰ë°©í–¥ì´ ë²½, ë¶ˆ, ë°©ë¬¸í–ˆë˜ ìœ„ì¹˜			
 				map[ny][nx] = '@';
 				sang.push({ ny,nx });
 				visit[ny][nx] = true;
@@ -112,7 +112,7 @@ int main() {
 			}
 		}
 		bfs();
-		// ÃÊ±âÈ­
+		// ì´ˆê¸°í™”
 		while (!sang.empty())sang.pop(); 
 		while (!fire.empty())fire.pop();
 		memset(visit, false, sizeof(visit));

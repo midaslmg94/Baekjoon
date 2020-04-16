@@ -3,7 +3,7 @@
 #define MAX 100
 using namespace std;
 int castle[MAX][MAX];
-int visit[MAX][MAX][2]; // i,j¹øÂ° À§Ä¡¿¡¼­ Ä®ÀÌ ¾øÀ¸¸é 0¿¡, Ä®ÀÌ ÀÖÀ¸¸é 1¿¡ °ª ÀúÀå
+int visit[MAX][MAX][2]; // i,jë²ˆì§¸ ìœ„ì¹˜ì—ì„œ ì¹¼ì´ ì—†ìœ¼ë©´ 0ì—, ì¹¼ì´ ìˆìœ¼ë©´ 1ì— ê°’ ì €ì¥
 int dy[4] = { -1,1,0,0 };
 int dx[4] = { 0,0,-1,1 };
 int n, m, limit_time;
@@ -18,7 +18,7 @@ int main() {
 			visit[i][j][1] = -1;			
 		}
 	}
-	queue<pair<pair<int, int>,int>>q; // yÁÂÇ¥,xÁÂÇ¥,Ä®ÀÌ ÀÖ´ÂÁö ¾ø´ÂÁö
+	queue<pair<pair<int, int>,int>>q; // yì¢Œí‘œ,xì¢Œí‘œ,ì¹¼ì´ ìˆëŠ”ì§€ ì—†ëŠ”ì§€
 	q.push({ { 0,0 },0 });
 	visit[0][0][0] = 0;
 	int t = 0;
@@ -30,7 +30,7 @@ int main() {
 			int x = q.front().first.second;
 			int sword = q.front().second;
 			q.pop();
-			if (y == n - 1 && x == m - 1) { // °øÁÖ Ã£À½
+			if (y == n - 1 && x == m - 1) { // ê³µì£¼ ì°¾ìŒ
 				answer = min(answer, visit[y][x][sword]);
 			}
 			for (int k = 0; k < 4; k++) {
@@ -38,23 +38,23 @@ int main() {
 				int nx = x + dx[k];
 				if (0 > ny || ny >= n || 0 > nx || nx >= m)continue;
 				if (visit[ny][nx][sword] != -1)continue;
-				if (castle[ny][nx] == 0) { // ºó °ø°£
-					if (sword == 1) { // ÇöÀç Ä®ÀÌ ÀÖÀ½
+				if (castle[ny][nx] == 0) { // ë¹ˆ ê³µê°„
+					if (sword == 1) { // í˜„ì¬ ì¹¼ì´ ìˆìŒ
 						q.push({ { ny,nx },1 });
 						visit[ny][nx][sword] = visit[y][x][sword] + 1;		
 					}
 					else {						
-						q.push({ { ny,nx },0 }); // ÇöÀç Ä®ÀÌ ¾øÀ½
+						q.push({ { ny,nx },0 }); // í˜„ì¬ ì¹¼ì´ ì—†ìŒ
 						visit[ny][nx][sword] = visit[y][x][sword] + 1;		
 					}
 				}
-				else if (castle[ny][nx] == 1) { // º®
-					if (sword == 1) { // Ä®ÀÌ ÀÖ´Â °æ¿ì¿¡¸¸ ÁøÇà °¡´É
+				else if (castle[ny][nx] == 1) { // ë²½
+					if (sword == 1) { // ì¹¼ì´ ìˆëŠ” ê²½ìš°ì—ë§Œ ì§„í–‰ ê°€ëŠ¥
 						q.push({ { ny,nx },1 });
 						visit[ny][nx][sword] = visit[y][x][sword] + 1;
 					}
 				}
-				else { // Ä®
+				else { // ì¹¼
 					q.push({ { ny,nx },1 });
 					visit[ny][nx][1] = visit[y][x][sword] + 1;
 				}

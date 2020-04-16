@@ -3,13 +3,13 @@
 #define MAX 100000+1
 using namespace std;
 int arr[MAX];
-int answer[MAX]; // nÃÊ¿¡ Ã£´Â °æ¿ìÀÇ ¼ö
-int moving[3] = { -1,1,0 }; // µÚ·Î°¡±â, ¾ÕÀ¸·Î°¡±â, ¼ø°£ÀÌµ¿
+int answer[MAX]; // nì´ˆì— ì°¾ëŠ” ê²½ìš°ì˜ ìˆ˜
+int moving[3] = { -1,1,0 }; // ë’¤ë¡œê°€ê¸°, ì•ìœ¼ë¡œê°€ê¸°, ìˆœê°„ì´ë™
 int n, k;
 
 void bfs() {
 	queue<pair<int, int>>q;
-	q.push({ n,0 }); // ÇöÀç À§Ä¡, ½Ã°£
+	q.push({ n,0 }); // í˜„ì¬ ìœ„ì¹˜, ì‹œê°„
 	arr[n] = 0;
 	while (!q.empty()) {
 		int cur_pos = q.front().first;
@@ -19,11 +19,11 @@ void bfs() {
 		if (cur_pos == k) {
 			answer[cur_time] += 1;
 		}
-		moving[2] = cur_pos; // ¼ø°£ÀÌµ¿
+		moving[2] = cur_pos; // ìˆœê°„ì´ë™
 		for (int i = 0; i < 3; i++) {
 			int next_pos = cur_pos + moving[i];
 			int next_time = cur_time + 1;
-			if (next_pos<0 || next_pos>MAX)continue; // ¹üÀ§ ÃÊ°ú
+			if (next_pos<0 || next_pos>MAX)continue; // ë²”ìœ„ ì´ˆê³¼
 			if (arr[next_pos] == 0) {
 				q.push({ next_pos, next_time });
 			}
@@ -36,7 +36,7 @@ int main() {
 	cin >> n >> k;
 	bfs();
 	for (int i = 0; i < MAX; i++) {
-		if (answer[i] != 0) { // °¡Àå ºü¸¥ ½Ã°£À» Ãâ·Â
+		if (answer[i] != 0) { // ê°€ì¥ ë¹ ë¥¸ ì‹œê°„ì„ ì¶œë ¥
 			cout << i << endl;
 			cout << answer[i];
 			return 0;

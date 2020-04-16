@@ -9,7 +9,7 @@ vector<vector<int>>map(MAX);
 bool visit[MAX];
 int n, m, k, x;
 void bfs(int start) {
-	int dist = 0; // ¸î¸¸Å­ °¬´ÂÁö
+	int dist = 0; // ëª‡ë§Œí¼ ê°”ëŠ”ì§€
 	queue<int>q;
 	q.push(start);
 	visit[start] = true;
@@ -47,7 +47,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
 	freopen("input.txt", "r", stdin);
-	cin >> n >> m >> k >> x; // µµ½Ã, µµ·Î, °¡¾ßÇÒ °Å¸®, ½ÃÀÛ µµ½Ã
+	cin >> n >> m >> k >> x; // ë„ì‹œ, ë„ë¡œ, ê°€ì•¼í•  ê±°ë¦¬, ì‹œì‘ ë„ì‹œ
 	int c1; int c2;
 	for (int i = 0; i < m; i++) {
 		cin >> c1 >> c2;

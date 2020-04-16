@@ -10,7 +10,7 @@ int map[MAX][MAX];
 bool visit[MAX][MAX];
 int t;
 int length;
-int dy[8] = { -2,-1,1,2,2,1,-1,-2 }; //¸Ç Ã³À½Àº ÀÚ±â ÀÚ½Å, ½Ã°è ¹İ´ë¹æÇâÀ¸·Î °¡´Â °æ·Î
+int dy[8] = { -2,-1,1,2,2,1,-1,-2 }; //ë§¨ ì²˜ìŒì€ ìê¸° ìì‹ , ì‹œê³„ ë°˜ëŒ€ë°©í–¥ìœ¼ë¡œ ê°€ëŠ” ê²½ë¡œ
 int dx[8] = { -1,-2,-2,-1,1,2,2,1 };
 int start_y, start_x, end_y, end_x;
 int result = 0;
@@ -22,7 +22,7 @@ int bfs(int y, int x) {
 		y = q.front().first;
 		x = q.front().second;
 		q.pop();
-		// ÇöÀç À§Ä¡°¡ µµÂøÁöÀÎÁö È®ÀÎ
+		// í˜„ì¬ ìœ„ì¹˜ê°€ ë„ì°©ì§€ì¸ì§€ í™•ì¸
 		if (y == end_y && x == end_x) {
 			return map[y][x];
 		}

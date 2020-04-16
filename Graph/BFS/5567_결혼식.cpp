@@ -4,7 +4,7 @@
 using namespace std;
 int n, m;
 int friends[MAX][MAX];
-bool friendsList[MAX]; // »ó±ÙÀÌÀÇ Ä£±¸µé È®ÀÎ
+bool friendsList[MAX]; // ìƒê·¼ì´ì˜ ì¹œêµ¬ë“¤ í™•ì¸
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);	cout.tie();
@@ -20,16 +20,16 @@ int main() {
 	queue<int>q;
 	int num = 0; 
 	for (int i = 1; i <= n; i++) {
-		if (friends[1][i] == 1) {// »ó±ÙÀÌÀÇ Á÷Á¢ÀûÀÎ Ä£±¸µé
+		if (friends[1][i] == 1) {// ìƒê·¼ì´ì˜ ì§ì ‘ì ì¸ ì¹œêµ¬ë“¤
 			q.push(i);
 			friendsList[i] = true;
 			num++;
 		}
 	}
-	while (!q.empty()) { // »ó±ÙÀÌÀÇ °£Á¢ÀûÀÎ Ä£±¸µé
+	while (!q.empty()) { // ìƒê·¼ì´ì˜ ê°„ì ‘ì ì¸ ì¹œêµ¬ë“¤
 		int y = q.front(); 
 		q.pop();
-		for (int x = 2; x <= n; x++) { // »ó±ÙÀÌ´Â Á¦¿Ü, »ó±ÙÀÌ¿Í Á÷Á¢ÀûÀÎ Ä£±¸µéµµ Á¦¿Ü
+		for (int x = 2; x <= n; x++) { // ìƒê·¼ì´ëŠ” ì œì™¸, ìƒê·¼ì´ì™€ ì§ì ‘ì ì¸ ì¹œêµ¬ë“¤ë„ ì œì™¸
 			if (friends[y][x] == 1 && friendsList[x]!=1) {
 				friendsList[x] = true;
 				num++;

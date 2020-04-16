@@ -4,18 +4,18 @@
 using namespace std;
 string str;
 stack<char>st;
-stack<char>tmp; //  ¿Ã¹Ù¸¥ °ıÈ£ÀÎÁö È®ÀÎÇÏ±â À§ÇÑ ÀÓ½Ã ½ºÅÃ
+stack<char>tmp; //  ì˜¬ë°”ë¥¸ ê´„í˜¸ì¸ì§€ í™•ì¸í•˜ê¸° ìœ„í•œ ì„ì‹œ ìŠ¤íƒ
 bool isCorrect() {
 	tmp.push(str[0]);
 	for (int i = 1; i < str.size(); i++) {
-		if (str[i] == ')') { // ´İ´Â °ıÈ£¶ó¸é ½ºÅÃÀº ºñ¾îÀÖÁö ¾Ê°í, top¿¡´Â ¹«Á¶°Ç ±×¿¡ ¸Â´Â ¿©´Â °ıÈ£µéÀÌ ÀÖ¾î¾ß ÇÔ
+		if (str[i] == ')') { // ë‹«ëŠ” ê´„í˜¸ë¼ë©´ ìŠ¤íƒì€ ë¹„ì–´ìˆì§€ ì•Šê³ , topì—ëŠ” ë¬´ì¡°ê±´ ê·¸ì— ë§ëŠ” ì—¬ëŠ” ê´„í˜¸ë“¤ì´ ìˆì–´ì•¼ í•¨
 			if (tmp.empty()) {
 				return false;
 			}
-			if (tmp.top() == '[' ) {// Àß¸øµÈ °ıÈ£ÀÇ ¿¹½Ã
+			if (tmp.top() == '[' ) {// ì˜ëª»ëœ ê´„í˜¸ì˜ ì˜ˆì‹œ
 				return false;
 			}
-			else if (tmp.top() == '(') {  // °ıÈ£ ½Ö ÀÏÄ¡ --> pop
+			else if (tmp.top() == '(') {  // ê´„í˜¸ ìŒ ì¼ì¹˜ --> pop
 				tmp.pop(); 
 			}
 			else { tmp.push(str[i]); }
@@ -24,15 +24,15 @@ bool isCorrect() {
 			if (tmp.empty()) {
 				return false;
 			}
-			if (tmp.top() == '(') {// Àß¸øµÈ °ıÈ£ÀÇ ¿¹½Ã
+			if (tmp.top() == '(') {// ì˜ëª»ëœ ê´„í˜¸ì˜ ì˜ˆì‹œ
 				return false;
 			}
-			else if (tmp.top() == '[') {// °ıÈ£ ½Ö ÀÏÄ¡ --> pop
+			else if (tmp.top() == '[') {// ê´„í˜¸ ìŒ ì¼ì¹˜ --> pop
 				tmp.pop(); 
 			} 
 			else { tmp.push(str[i]); }
 		}
-		else if (str[i] == '(' || str[i] == '['){ // ¿©´Â °ıÈ£´Â ±×³É ½ºÅÃ¿¡ Çª½Ã
+		else if (str[i] == '(' || str[i] == '['){ // ì—¬ëŠ” ê´„í˜¸ëŠ” ê·¸ëƒ¥ ìŠ¤íƒì— í‘¸ì‹œ
 			tmp.push(str[i]);
 		}
 	}
@@ -45,15 +45,15 @@ bool isCorrect() {
 
 int main() {
 	cin >> str;
-	// ¿Ã¹Ù¸¥ °ıÈ£ÀÎÁö È®ÀÎ
+	// ì˜¬ë°”ë¥¸ ê´„í˜¸ì¸ì§€ í™•ì¸
 	if (!isCorrect() || !tmp.empty()) {
 		cout << "0";
 		return 0;
 	}
-	// ¿Ã¹Ù¸¥ °ıÈ£¶ó¸é () --> 2, [] --> 3À¸·Î Ä¡È¯
+	// ì˜¬ë°”ë¥¸ ê´„í˜¸ë¼ë©´ () --> 2, [] --> 3ìœ¼ë¡œ ì¹˜í™˜
 	for (int i = 0; i < str.size(); i++) {
 		if (str[i] == ')') {
-			if (st.top() == '(') { // ( )ÀÌ¹Ç·Î 2·Î Ä¡È¯
+			if (st.top() == '(') { // ( )ì´ë¯€ë¡œ 2ë¡œ ì¹˜í™˜
 				st.pop();
 				st.push('2');
 			}
@@ -62,7 +62,7 @@ int main() {
 			}
 		}
 		else if (str[i] == ']') {
-			if (st.top() == '[') { // [ ]ÀÌ¹Ç·Î 3À¸·Î Ä¡È¯
+			if (st.top() == '[') { // [ ]ì´ë¯€ë¡œ 3ìœ¼ë¡œ ì¹˜í™˜
 				st.pop();
 				st.push('3');
 			}
@@ -79,6 +79,6 @@ int main() {
 		st.pop();
 	}
 	
-	// °ö¼À, µ¡¼À
+	// ê³±ì…ˆ, ë§ì…ˆ
 
 }

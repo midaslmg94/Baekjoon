@@ -9,9 +9,9 @@ using namespace std;
 int n, m, money;
 vector<int>v[MAX];
 int parent[MAX];
-int student[MAX];// i¹øÂ° Ä£±¸¸¦ »ç±Í´Âµ¥ µå´Â ºñ¿ë(Ä£±¸ °ü°è ¿¬°á Àü)
-int cost[MAX]; // i¹øÂ° Ä£±¸¸¦ »ç±Í´Âµ¥ µå´Â ºñ¿ë(Ä£±¸ °ü°è ¿¬°á ÈÄ)
-int total = 0; // ¸ğµç Ä£±¸¸¦ »ç±Í´Âµ¥ µå´Â ÃÑ ºñ¿ë
+int student[MAX];// ië²ˆì§¸ ì¹œêµ¬ë¥¼ ì‚¬ê·€ëŠ”ë° ë“œëŠ” ë¹„ìš©(ì¹œêµ¬ ê´€ê³„ ì—°ê²° ì „)
+int cost[MAX]; // ië²ˆì§¸ ì¹œêµ¬ë¥¼ ì‚¬ê·€ëŠ”ë° ë“œëŠ” ë¹„ìš©(ì¹œêµ¬ ê´€ê³„ ì—°ê²° í›„)
+int total = 0; // ëª¨ë“  ì¹œêµ¬ë¥¼ ì‚¬ê·€ëŠ”ë° ë“œëŠ” ì´ ë¹„ìš©
 int findParent(int n1) {
 	if (n1 != parent[n1]) {
 		return parent[n1] = findParent(parent[n1]);
@@ -55,18 +55,18 @@ int main() {
 		int cur = i;
 		for (int j = 0; j < v[i].size(); j++) {
 			int next = v[i][j];
-			if (parent[cur] != parent[next]) { // ºÎ¸ğ°¡ ´Ù¸¦ °æ¿ì 
-				unionParent(cur, next); // ºÎ¸ğ¸¦ ÇÕÄ§
+			if (parent[cur] != parent[next]) { // ë¶€ëª¨ê°€ ë‹¤ë¥¼ ê²½ìš° 
+				unionParent(cur, next); // ë¶€ëª¨ë¥¼ í•©ì¹¨
 			}
 		}
 	}
 	
 	for (int i = 1; i <= n; i++) {	 
-		int cur = findParent(parent[i]); // ¿©±â¼­ ¹®Á¦°¡ ¹ß»ı --> int cur = parent[i];·Î Çß¾úÀ½
-		cost[cur] = min(cost[cur], student[i]); // ºÎ¸ğ°¡ curÀÎ ÇĞ»ıÀÇ ºñ¿ë Áß, ÃÖ¼Ò¸¦ Ã£À½
+		int cur = findParent(parent[i]); // ì—¬ê¸°ì„œ ë¬¸ì œê°€ ë°œìƒ --> int cur = parent[i];ë¡œ í–ˆì—ˆìŒ
+		cost[cur] = min(cost[cur], student[i]); // ë¶€ëª¨ê°€ curì¸ í•™ìƒì˜ ë¹„ìš© ì¤‘, ìµœì†Œë¥¼ ì°¾ìŒ
 	}
 	for (int i = 1; i <= n; i++) {
-		if (cost[i] <= 10000) { // cost[i]>10000Àº ºÎ¸ğ°¡ ´Ù¸¥ °ªÀÎ °Í
+		if (cost[i] <= 10000) { // cost[i]>10000ì€ ë¶€ëª¨ê°€ ë‹¤ë¥¸ ê°’ì¸ ê²ƒ
 			total += cost[i];
 		}
 	}

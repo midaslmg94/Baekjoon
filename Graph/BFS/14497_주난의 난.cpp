@@ -10,8 +10,8 @@ using namespace std;
 char map[MAX][MAX];
 bool visit[MAX][MAX];
 int n, m;
-int start_y, start_x; // ÁÖ³­ÀÇ À§Ä¡
-int choco_y, choco_x; // ¹üÀÎÀÇ À§Ä¡
+int start_y, start_x; // ì£¼ë‚œì˜ ìœ„ì¹˜
+int choco_y, choco_x; // ë²”ì¸ì˜ ìœ„ì¹˜
 int answer = 0;
 int dy[4] = { -1,1,0,0 };
 int dx[4] = { 0,0,-1,1 };
@@ -59,7 +59,7 @@ int main() {
 	freopen("input.txt", "r", stdin);
 	cin >> n >> m;
 	cin >> start_y >> start_x >> choco_y >> choco_x;
-	start_y--; start_x--; choco_y--; choco_x--; // ½ÃÀÛÁ¡À» 0,0ºÎÅÍ ÇÏ±â À§ÇØ
+	start_y--; start_x--; choco_y--; choco_x--; // ì‹œì‘ì ì„ 0,0ë¶€í„° í•˜ê¸° ìœ„í•´
 	for (int i = 0; i < n; i++) {
 		string str;
 		cin >> str;
