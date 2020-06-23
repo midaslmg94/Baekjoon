@@ -63,15 +63,6 @@ int main() {
                 }
             }            
         }
-        //   for (int k = 0; k < L; k++) {          // 몇 층
-        //     for (int i = 0; i < R; i++) {      // y좌표
-        //         for (int j = 0; j < C; j++) {  // x좌표
-        //         cout<<building[i][j][k]<<' ';
-        //         }
-        //         cout<<endl;
-        //     }
-        //     cout<<endl<<endl;
-        //   }
         int res = bfs(start);
         if (res != 0) {
             cout << "Escaped in " << res << " minute(s).\n";
