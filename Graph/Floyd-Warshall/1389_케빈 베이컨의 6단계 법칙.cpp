@@ -6,8 +6,8 @@ int n, m;
 int Map[MAX][MAX];
 
 struct INFO {
-    int num;  // À¯Àú¹øÈ£
-    int cnt;  // ÄÉºóº£ÀÌÄÁ ¼ıÀÚ
+    int num;  // ìœ ì €ë²ˆí˜¸
+    int cnt;  // ì¼€ë¹ˆë² ì´ì»¨ ìˆ«ì
 };
 
 bool cmp(INFO a, INFO b) {
@@ -21,9 +21,9 @@ vector<INFO> people;
 void floyd() {
     for (int k = 1; k <= n; k++) {
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {                // i¿¡¼­ j±îÁö °¡´Âµ¥ k¸¦ °ÅÃÄ¼­ °£´Ù
-                if (Map[i][k] + Map[k][j] < Map[i][j]) {  // k¸¦ °ÅÃÄ°¡´Â°Ô ´õ ÀÛÀ¸¸é
-                    Map[i][j] = Map[i][k] + Map[k][j];    // °ª °»½Å
+            for (int j = 1; j <= n; j++) {                // iì—ì„œ jê¹Œì§€ ê°€ëŠ”ë° kë¥¼ ê±°ì³ì„œ ê°„ë‹¤
+                if (Map[i][k] + Map[k][j] < Map[i][j]) {  // kë¥¼ ê±°ì³ê°€ëŠ”ê²Œ ë” ì‘ìœ¼ë©´
+                    Map[i][j] = Map[i][k] + Map[k][j];    // ê°’ ê°±ì‹ 
                 }
             }
         }
@@ -41,7 +41,7 @@ int main() {
         Map[f1][f2] = 1;
         Map[f2][f1] = 1;
     }
-    // Á¤Á¡ ÀüÃ³¸® ÀÛ¾÷
+    // ì •ì  ì „ì²˜ë¦¬ ì‘ì—…
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= n; j++) {
             if (i == j) continue;
