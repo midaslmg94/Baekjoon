@@ -39,7 +39,7 @@ int main() {
     }
     long long ans = 0;
     long long left = 0;
-    long long right = 1e12-n/2;
+    long long right = 1e12-n/2; // 최대 빌딩의 높이 : 
     long long min_block = 0, max_block = 0;
     min_block = calc(left);
     max_block = calc(right);
