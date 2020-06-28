@@ -1,47 +1,42 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
-#include<queue>
-#include<deque>
-#include<string.h>
-#define MAX 40
+#include <bits/stdc++.h>
 #define endl "\n"
+#define MAX 41
 using namespace std;
-long long result = 0;
-int n, s;
-vector<int>v;
-bool visit[40];
-void dfs(int idx, int cnt,int depth) {
-	if (cnt == depth) {
-		int tmp = 0;
-		for (int i = 0; i < v.size(); i++) {
-			if (visit[i]) {
-				tmp += v[i];
+int n;
+int s;
+int answer = 0;
+vector<int> v[MAX][MAX];
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    freopen("input.txt", "r", stdin);
+    cin >> n >> s;
+	
+    for (int i = 1; i <= n; i++) {
+		int tmp;
+		cin>>tmp;
+		v[1][i].push_back(tmp);
+    }
+	for(int i=2; i<=n; i++){
+		for(int j=1; j<=n; j++){
+			for(int k=0; k<v[i][j].size(); k++){
+				
+			}
+		cout<<endl;
+		}
+	}
+	
+
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=n; j++){
+			for(int k=0; k<v[i][j].size(); k++){				
+				if(v[i][j][k]==s){					
+					answer++;
+				}
 			}
 		}
-		if (tmp == s)
-			result++;
-		return;
 	}
-	for (int i = idx; i < v.size(); i++) {
-		if (visit[i])continue;
-		visit[i] = true;
-		dfs(i, cnt+1,depth);
-		visit[i] = false;
-	}
-}
-int main() {
-	ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-	freopen("input.txt", "r", stdin);
-	cin >> n >> s;
-	for (int i = 0; i < n; i++) {
-		int a; cin >> a;
-		v.push_back(a);
-	}
-	for (int i = 1; i <= v.size(); i++) {
-		dfs(0,0,i);
-		memset(visit, false, sizeof(visit));
-	}
-	cout << result;
-	return 0;
+	cout<<answer;
+    return 0;
 }
