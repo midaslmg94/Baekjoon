@@ -16,9 +16,10 @@ bool cmp(pair<int, int> a, pair<int, int> b) {
 }
 
 int dfs(int start) {
+    visited[start]=true;
     for (int i = 0; i < arr[start].size(); i++) {
-        if (!visited[i]) {
-            visited[i] = true;
+        int nx = arr[start][i];
+        if (!visited[nx]) {            
             idx++;
             dfs(arr[start][i]);
         }
@@ -39,15 +40,16 @@ int main() {
 
     vector<pair<int, int>> ans; // 깊이, 컴퓨터 번호
     for (int i = 1; i <= n; i++) {
-        if (arr[i].size() == 0) continue;
+        if (arr[i].size() == 0) continue;        
         ans.push_back({dfs(i), i});
         memset(visited, false, sizeof(visited));
         idx = 0;
     }
+
     sort(ans.begin(), ans.end(), cmp);
-    for (int i = 0; i < ans.size(); i++) {
-        cout << ans[i].first << ' ' << ans[i].second << endl;
-    }
+    // for (int i = 0; i < ans.size(); i++) {
+    //     cout << ans[i].first << ' ' << ans[i].second << endl;
+    // }
     int tmp = ans[0].first;
     for (int i = 0; i < n; i++) {
         if (tmp == ans[i].first) {
