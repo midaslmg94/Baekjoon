@@ -2,64 +2,11 @@
 #define endl "\n"
 #define MAX 10
 using namespace std;
+map<int, int> m1;
+map<int, int> m2;
 int n, m, k;
-map<int, int> Map;
-int key, value;
+int key, val;
 int oper;
-// 가장 가까운 데이터 찾기
-void findKey(int start, int val) {
-    bool flag_upper = false;
-    bool flag_lower = false;
-    if (val == -1) {  // 출력용
-    
-        for (int i = 1; i <= k; i++) {
-            int upper = start + i;
-            int lower = start - i;
-            if (Map.count(upper)) {
-                flag_upper = true;
-            }
-            if (Map.count(lower)) {
-                flag_lower = true;
-            }
-            if (flag_upper && flag_lower) {  // 해당하는 Key가 2개이상
-                cout << "?" << endl;
-                return;
-            }
-            if (flag_upper) {
-                cout << Map[upper] << endl;
-                return;
-            }
-            if (flag_lower) {
-                cout << Map[lower] << endl;
-                return;
-            }
-        }
-        cout << -1 << endl;  // 만족하는 key가 없음
-        return;
-    } else {  // 데이터 바꾸기 용
-        for (int i = 1; i <= k; i++) {
-            int upper = start + i;
-            int lower = start - i;
-            if (Map.count(upper)) {
-                flag_upper = true;
-            }
-            if (Map.count(lower)) {
-                flag_lower = true;
-            }
-            if (flag_upper && flag_lower) {  // 유일 key가 없음 -> 무시
-                return;
-            }
-            if (flag_upper) {
-                Map[upper] = val;
-                return;
-            }
-            if (flag_lower) {
-                Map[lower] = val;
-                return;
-            }
-        }
-    }
-}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
@@ -67,33 +14,55 @@ int main() {
     freopen("input.txt", "r", stdin);
     cin >> n >> m >> k;
     for (int i = 0; i < n; i++) {
-        cin >> key >> value;
-        Map[key] = value;
+        cin >> key >> val;
+        m1[key] = val;
+        m2[-key] = val;
     }
     for (int i = 0; i < m; i++) {
         cin >> oper;
-        if (oper == 1) {  // 새로운 데이터 추가
-            int new_key, new_value;
-            cin >> new_key >> new_value;
-            Map[new_key] = new_value;
-        } else if (oper == 2) {  // 데이터 변경
-            int change_key, change_value;
-            cin >> change_key >> change_value;
-            if (Map.find(change_key) != Map.end()) {  // 데이터가 있음
-                Map[change_key] = change_value;
-            } else {
-                findKey(change_key, change_value);
+        if (oper == 1) {  // 입력
+            cin >> key >> val;
+            m1[key] = val;
+            m2[-key] = val;
+        } else if (oper == 2) {  // 변경
+            cin >> key >> val;
+            auto upper = m1.lower_bound(key);
+            auto lower = m2.lower_bound(-key);
+            int up_key = upper->first;
+            int low_key = -lower->first;
+            if (up_key - key <= key - low_key) {  // 위쪽이랑 더 가까움
+                if (up_key - key <= k) {
+                    m1[up_key] = val;
+                    m2[-up_key] = val;
+                }
+            } else {  // 아래쪽이랑 더 가까움
+                if (key - low_key <= k) {
+                    m1[low_key] = val;
+                    m2[-low_key] = val;
+                }
             }
-        } else {  // 데이터 출력
-            int find_key;
-            cin >> find_key;
-            if (Map.count(find_key)) {  // 데이터가 있음
-                cout << Map[find_key] << endl;
-            } else {
-                findKey(find_key, -1);
+        } else {  // 출력
+            cin >> key;
+            auto upper = m1.lower_bound(key);
+            auto lower = m2.lower_bound(-key);
+            int up_key = upper->first;
+            int low_key = -lower->first;
+            if (up_key == low_key) {  // 중복 키
+                cout << "?" << endl;
+            } else if (up_key - key < key - low_key) {  // 위쪽이랑 더 가까움
+                if (up_key - key <= k) {
+                    cout << upper->second << endl;
+                } else {
+                    cout << -1 << endl;
+                }
+            } else if (up_key - key > key - low_key) {  // 아래쪽이랑 더 가까움
+                if (key - low_key <= k) {
+                    cout << lower->second << endl;
+                } else {
+                    cout << -1 << endl;
+                }
             }
         }
     }
-
     return 0;
 }
