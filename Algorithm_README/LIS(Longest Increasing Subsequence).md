@@ -96,7 +96,7 @@ int main() {
 		}
 		
 	}
-	answer = v.size()- lis.size();
+	answer = lis.size();
 	cout << answer;
 	return 0;
 }
