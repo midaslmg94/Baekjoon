@@ -122,6 +122,16 @@ li = list(map(int, stdin.readline().split()))
 - print를 할 때는 같은 자료형으로 출력을 해야한다.
 	- print(“정답은” + str(5))
 
+- 파일입출력
+	- sys.stdin 을 아래와 같이 정의해주면 된다. 
+	```python
+	import sys, copy
+	sys.stdin = open("input.txt", "r")
+	arr = map(int, sys.stdin.readline().split())
+	Map = list(list(map(int, sys.stdin.readline().split())) for _ in range(n))
+	```
+
+
 > 비교 연산자
 - 기존에 `&&` `||` 로 썼던 것을 그냥 and, or로 쓴다. 또한, `if 0<=a<=10:` 이것도 가능하다.
 
