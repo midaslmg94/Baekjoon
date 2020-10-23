@@ -2,9 +2,86 @@
 
 
 
+### IF
+
+- `select`, `where` 절 에서 사용가능
+
+  ```mysql
+  SELECT IF(10 > 5, '크다', '작다') AS result;
+  
+  ```
+
+
+
 ### Order By
 
-- Order by 뒤에 우선순위가 있는 열을 순서대록 적음
+- Order by 뒤에 우선순위가 있는 열을 순서대로 적는다.
+
+
+
+### LIKE
+
+- `where` 절과 함께 특정 패턴을 검색할 때 사용
+
+  ```mysql
+  SELECT *
+  FROM Student
+  WHERE Student_ID like 'a%';
+  
+  LIKE 'a%' // a로 시작되는 모든 것
+  LIKE 'a_%_%' // a로 시작되고 최소 3이상의 길이를 가진 것
+  LIKE '_a%' // 두번째 자리에 a가 들어가는 모든 것
+  
+  ```
+
+  
+
+### IN
+
+- `where`절 내 여러 값을 설정하고자 할 때 사용
+
+- 연산 속도가 상대적으로 빠름
+
+- or 연산과 유사한 효과
+
+  ```
+  select *
+  from Customers
+  where country in ('UK', 'Korea') // Customers 중 country가 UK이거나 KOREA인 것 다 뽑기
+  ```
+
+  
+
+- 문제 : 동물 보호소에 들어온 동물 중 이름이 `Lucy, Ella, Pickle, Rogan, Sabrina, Mitty`인 동물의 아이디와 이름, 성별 및 중성화 여부를 조회하는 SQL 문을 작성해주세요.
+
+  ```mysql
+  select ANIMAL_ID, NAME, SEX_UPON_INTAKE
+  from ANIMAL_INS ani
+  where NAME in ('Lucy', 'Ella', 'Pickle', 'Rogan', 'Sabrina', 'Mitty');
+  ```
+
+  
+
+### Between
+
+- `where` 절 내 검색 조건으로 범위를 지정하고자 할 때 사용 
+- `between`과 `and` 사이에 들어 가는 값은  `~이상 ~ 이하` 이다
+
+```mysql
+select *
+from products
+where price between 10 and 20;
+
+select *
+from products
+where price not between 10 and 20;
+
+select *
+from products
+where (price between 10 and 20) and not  id in(2,3); // 이렇게 쓸 수도 있다
+```
+
+
 
 
 
@@ -106,13 +183,80 @@ LIMIT 행수
 SELECT 열명
 FROM 테이블명
 LIMIT 행수                  
+
+
+// 지정한 숫자 개수 리턴
+SELECT *
+FROM
+LIMIT 0,3; // 0번부터 3개
+```
+
+
+
+### Group By
+
+- 집계함수와 함께 사용 되어, 결과를 지정한 칼럼에 따라 그룹으로 묶고자 할 때 사용
+
+  ```mysql
+  select count(id)
+  from customers
+  group by country // 각 도시에 사는 사람이 몇명인지
+  ```
+
+  
+
+
+
+### MIN(), MAX(), COUNT(), AVG(), SUM()
+
+- 집계함수
+
+- `select` 에서 사용
+
+  - `count` : `null`은 숫자로 세지 않는다.
+
+  ```mysql
+  select count(id) from products;
+  select avg(price) from products;
+  select sum(price) from products;
+  ```
+
+- 문제 : 평균 잔고(balance) 가 700이상인 지점의 이름과 평균 잔고를 구하라
+
+  ```mysql
+  select branch_name, avg(balance)
+  from account
+  group by branch_name 
+  having avg(balance) >= 700;
+  ```
+
+
+
+
+
+### Union
+
+- `select`의 칼럼 리스트를 기준으로 두 개 이상의 질의 결과를 하나의 테이블로 합치고자 할 때 사용
+- 기본적으로 중복값을 제거한다.
+- 중복값을 포함하고 싶은 경우 `union all`을 사용한다.
+
+```mysql
+select *
+from customers
+union
+select city from orders
+order by city;
 ```
 
 
 
 
 
+
+
 ### Join
+
+![image-20201023235348062](C:\Users\midas\AppData\Roaming\Typora\typora-user-images\image-20201023235348062.png)
 
 컬럼 구조
 
