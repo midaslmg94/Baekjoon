@@ -67,8 +67,50 @@
   
   - 해당 정점에서 인접하고 아직 방문하지 않은 정점들의 거리를 갱신
   
-    ![image-20200126234830740](C:\Users\midas\AppData\Roaming\Typora\typora-user-images\image-20200126234830740.png)
-  
+
+- 우선순위 큐 사용자 정의 비교함수 작성
+	- 우선순위 큐에 넣어서 비교해야할 요소가 3개 이상 있을 경우, 연산자 오버라이딩을 해야 한다. 
+	- 이 때, 중요한 것은 단순히 리턴타입이 단순히 `bool` 인 함수를 만드는 것이 아닌 연산자 오버라이딩이다.
+	```c++
+	struct INFO{
+		int y;
+		int x;
+		int z;
+	};
+	struct cmp{
+		bool operator()(INFO a, INFO b){
+			if(a.y == b.y){
+				if(a.x == b.x){
+					return a.z < b.z; // z는 오름차순
+				}
+				return a.x > b.x; // x는 오름차순 
+			}
+			return a.y < b.y; // y는 내림차순
+		}
+	};
+	int main() {
+		priority_queue<INFO, vector<INFO>, cmp>pq;
+		pq.push({1,2,3});
+		pq.push({3,1,2});
+		pq.push({4,1,1});
+		pq.push({2,4,3});
+		pq.push({2,5,3});
+		pq.push({2,0,3});
+		while(!pq.empty()){
+			cout<<pq.top().y << ' '<<pq.top().x<<' '<<pq.top().z <<endl;
+			pq.pop();
+		}		
+		/*
+		4 1 1
+		3 1 2
+		2 0 3
+		2 4 3
+		2 5 3
+		1 2 3
+		*/
+		return 0;
+	}
+	```
   
   
 - 구현코드 
