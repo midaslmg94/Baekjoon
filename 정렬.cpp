@@ -10,15 +10,15 @@ struct s {
 	int idx;
 };
 bool cmp_arr(int a, int b) {
-	return a > b; // ³»¸²Â÷¼ø Á¤·Ä : 5 4 3 2 1
+	return a > b; // ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ : 5 4 3 2 1
 }
 
 bool cmp_vector(int a, int b) {
-	return a > b; // ³»¸²Â÷¼ø Á¤·Ä
+	return a > b; // ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 }
 
-bool cmp_vector_struct(const s& a, const s& b) { // ¸Å°³º¯¼ö´Â Ç×»ó ÀÌ·¸°Ô const´Â Æ÷ÀÎÅÍ
-	// ¿©±â¼­ ¾î¶² ±¸Á¶Ã¼ º¯¼ö¸¦ ±âÁØÀ¸·Î Á¤·ÄÇÒ°ÇÁö¸¦ Á¤ÇÔ
+bool cmp_vector_struct(const s& a, const s& b) { // ë§¤ê°œë³€ìˆ˜ëŠ” í•­ìƒ ì´ë ‡ê²Œ constëŠ” í¬ì¸í„°
+	// ì—¬ê¸°ì„œ ì–´ë–¤ êµ¬ì¡°ì²´ ë³€ìˆ˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬í• ê±´ì§€ë¥¼ ì •í•¨
 	if (a.idx < b.idx) {
 		return true;
 	}
@@ -31,35 +31,33 @@ bool cmp_vector_struct(const s& a, const s& b) { // ¸Å°³º¯¼ö´Â Ç×»ó ÀÌ·¸°Ô const
 }
 
 int main() {
-	/*¹è¿­ Á¤·Ä
+	/*ë°°ì—´ ì •ë ¬
 	int a[5] = { 5,2,1,4,3 };
-	sort(a, a+5); // stlÀ» È°¿ëÇÑ Á¤·Ä(¿À¸§Â÷¼ø Á¤·Ä : 1 2 3 4 5)
-	//sort(a, a + 5, cmp_arr); // »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö »ç¿ë
-
+	sort(a, a+5); // stlì„ í™œìš©í•œ ì •ë ¬(ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ : 1 2 3 4 5)
+	//sort(a, a + 5, cmp_arr); // ì‚¬ìš©ì ì •ì˜ í•¨ìˆ˜ ì‚¬ìš©
 	for (const int n : a) {
 		cout << n << ' ';
 	}
 	cout << endl;*/
 
-	/*º¤ÅÍ Á¤·Ä
+	/*ë²¡í„° ì •ë ¬
 	vector<int>w;
 	w.push_back(4); w.push_back(1);
 	w.push_back(3); w.push_back(2); w.push_back(5);
-	sort(w.begin(), w.end()); // ¿À¸§Â÷¼ø Á¤·Ä : 1 2 3 4 5
-	sort(w.begin(), w.end(),cmp_vector); // ³»¸²Â÷¼ø Á¤·Ä : 5 4 3 2 1
+	sort(w.begin(), w.end()); // ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ : 1 2 3 4 5
+	sort(w.begin(), w.end(),cmp_vector); // ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ : 5 4 3 2 1
 	for (auto n : w) {
 		cout << n << ' ';
 	}
 	cout << endl;*/
 
-	/*º¤ÅÍ Á¤·Ä(pair)
+	/*ë²¡í„° ì •ë ¬(pair)
 	vector<pair<int, int>>v;
 	v.push_back({ 3, 4});
 	v.push_back({ 1, 2 });
 	v.push_back({ 5,1 });
-
-	sort(v.begin(), v.end()); //first ±âÁØÀ¸·Î ¿À¸§Â÷¼ø Á¤·Ä(±âº»°ª)
-	sort(v.begin(), v.end(),greater<pair<int,int>>()); //first ±âÁØÀ¸·Î ³»¸²Â÷¼ø Á¤·Ä
+	sort(v.begin(), v.end()); //first ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬(ê¸°ë³¸ê°’)
+	sort(v.begin(), v.end(),greater<pair<int,int>>()); //first ê¸°ì¤€ìœ¼ë¡œ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 	for (int i = 0; i < v.size(); i++) {
 		cout << v[i].first << ' ' << v[i].second<<endl;
 	}
@@ -68,12 +66,12 @@ int main() {
 		cout << n.first<<' '<<n.second<<endl;
 	}*/
 
-	/*º¤ÅÍ Á¤·Ä(±¸Á¶Ã¼)*/
+	/*ë²¡í„° ì •ë ¬(êµ¬ì¡°ì²´)*/
 	vector<s>v;
-	v.push_back({ 1,3,5 }); // num, rank, idx ¼ø¼­
+	v.push_back({ 1,3,5 }); // num, rank, idx ìˆœì„œ
 	v.push_back({ 3,1,7});
 	v.push_back({ 2, 5,1 });
-	//sort(v.begin(), v.end()); // ÀÌ·¸°Ô ÇÏ¸é ¿À·ù
+	//sort(v.begin(), v.end()); // ì´ë ‡ê²Œ í•˜ë©´ ì˜¤ë¥˜
 	sort(v.begin(), v.end(), cmp_vector_struct);
 	for (auto n : v) {
 		cout << n.num << n.rank << n.idx << endl;
