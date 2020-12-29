@@ -5,7 +5,7 @@
 
 # IntellJ
 out/
-
+*.iml
 # Pycharm
 venv/
 .idea/
