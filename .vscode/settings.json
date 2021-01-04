@@ -70,7 +70,7 @@
         "valarray": "cpp",
     },
     "python.pythonPath": "D:\\Download\\python\\python.exe",
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.enabled": true
     
 }
