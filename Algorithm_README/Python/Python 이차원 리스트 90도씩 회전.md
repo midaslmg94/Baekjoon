@@ -5,7 +5,7 @@
 <br>
 
 <p align="center">
-    <img src = "./images/list_rotate_90.png">
+    <img src = "../images/list_rotate_90.png">
 </p>
 
 <br>
