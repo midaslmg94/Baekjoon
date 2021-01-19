@@ -69,6 +69,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
     },
+    "code-runner.runInTerminal": true,
     "python.pythonPath": "D:\\Download\\python\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true
