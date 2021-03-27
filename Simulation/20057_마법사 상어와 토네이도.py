@@ -5,13 +5,11 @@ dy = [0,1,0,-1] # 좌 하 우 상
 dx = [-1,0,1,0]
 
 # 흩날리는 모래의 비율
-spreadPer = [ 
-                [0,0,0.02,0,0],
-                [0,0.1,0.07,0.01,0], 
-                [0.05,0,0,0,0], 
-                [0,0.1,0.07,0.01,0], 
-                [0,0,0.02,0,0]
-            ]
+spreadLeft = [[0,0,0.02,0,0],[0,0.1,0.07,0.01,0], [0.05,0,0,0,0], [0,0.1,0.07,0.01,0],[0,0,0.02,0,0]]
+spreadDown = []
+spreadRight = []
+spreadUp = []
+
 
 n = int(input())
 board = [list(map(int, input().split())) for _ in range(n)]
@@ -44,10 +42,12 @@ def rotate(num): # 진행 방향에 맞게 흩날리는 모래의 비율 회전
     #print(rotatePer)
     return rotatePer
 
+
 def spread(y, x, dir):
     global board, answer
     my = [-2,-2,-2,-2,-2,-1,-1,-1,-1,-1,0,0,0,0,0,1,1,1,1,1,2,2,2,2,2]
     mx = [-2,-1,0,1,2,-2,-1,0,1,2,-2,-1,0,1,2,-2,-1,0,1,2,-2,-1,0,1,2]
+ 
     spread_sand = rotate(dir)
     ret = board[y][x] # 움직일 모래
     restSand = 0
